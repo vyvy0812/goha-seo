@@ -35,6 +35,7 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `Persona Brand/Trung Nguyên TNT/source-context-Trung-Nguyen-TNT.md` (To filter for Plastics/Automation relevance)
     - `.agent/skills/analyzing-semantic-seo/references/entity-patterns.md` (For entity extraction rules)
 - **Constraint**: Must use the "Automation Focus" and "Taiwan Quality" lens from `source-context-Trung-Nguyen-TNT.md` when selecting entities.
+- **Constraint**: Ensure "Máy chấm keo PVC" (PVC Dispensing Machines) are EXCLUDED from the research unless the keyword specifically targets them.
 - **Output**: `research.md` (Use **Template 2** from `references/output-templates.md` but enhanced with "Brand Context" notes).
 
 ## 4. Phase 3: Competitor Intelligence (Turbo)
@@ -56,7 +57,7 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `research.md`
     - `competitor-insights.md`
     - `Persona Brand/Trung Nguyên TNT/central-entity-Trung-Nguyen-TNT.md` (To map relevant Machines & Solutions)
-- **Constraint**: MUST map at least one Trung Nguyên TNT Machine/Solution (from `central-entity`) as a key solution in the outline.
+- **Constraint**: MUST map at least one Trung Nguyên TNT Machine/Solution (from `central-entity`) as a key solution in the outline. EXCLUDE "Máy chấm keo PVC" (PVC Dispensing Machines) unless explicitly requested.
 - **Output**: `outline.md`
 
 ## 6. Phase 5: Authority Writing (Drafting)
@@ -87,7 +88,18 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     5.  **Expert Remarks**: Inject 1-2 `> **Kỹ sư Trung Nguyên TNT:**` blocks (as defined in `skill-persona-Trung-Nguyen-TNT.md`).
 - **Output**: `article.md` (Trung Nguyên TNT Branded Version)
 
-## 8. Phase 7: Final Audit & Validation
+## 8. Phase 7: Visual Enhancement
+**Goal**: Add visual depth with relevant industrial automation images.
+
+- **Skill**: `.agent/skills/visualizing-content/SKILL.md`
+- **Input**: `article.md` (Trung Nguyên TNT Branded Version)
+- **Action**:
+    1.  **Analyze**: Identify key sections for visual aid.
+    2.  **Search**: Find high-quality, relevant images (or placeholders).
+    3.  **Insert**: Add `![Alt](Url)` to `article.md`.
+- **Output**: `article.md` (Visualized Version)
+
+## 9. Phase 8: Final Audit & Validation
 **Goal**: Zero-defect delivery. Ensure the article matches Research, Outline, AND Persona.
 
 - **Skill**: `.agent/skills/auditing-content/SKILL.md`
@@ -103,6 +115,6 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - If Critical Issues found: **Auto-fix** or Request User Review.
 - **Output**: `audit-report.md` + Final `article.md`
 
-## 9. Final Delivery
+## 10. Final Delivery
 - Notify user of completion.
 - List all artifacts: `search-intent.md`, `research.md`, `competitor-insights.md`, `outline.md`, `article.md`, `audit-report.md`.

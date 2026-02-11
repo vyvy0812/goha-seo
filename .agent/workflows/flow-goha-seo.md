@@ -82,7 +82,18 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     3. **Agency Remarks**: Inject 1-2 `> **GOHA Note:**` blocks.
 - **Output**: `article.md` (GOHA Branded Version)
 
-## 8. Phase 7: Final Audit & Validation
+## 8. Phase 7: Visual Enhancement
+**Goal**: Add visual depth with relevant industrial/business images.
+
+- **Skill**: `.agent/skills/visualizing-content/SKILL.md`
+- **Input**: `article.md` (GOHA Branded Version)
+- **Action**:
+    1.  **Analyze**: Identify key sections for visual aid.
+    2.  **Search**: Find high-quality, relevant images (or placeholders).
+    3.  **Insert**: Add `![Alt](Url)` to `article.md`.
+- **Output**: `article.md` (Visualized Version)
+
+## 9. Phase 8: Final Audit & Validation
 **Goal**: Zero-defect delivery. Ensure the article matches Research, Outline, AND Persona.
 
 - **Skill**: `.agent/skills/auditing-content/SKILL.md`
@@ -98,6 +109,6 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - If Critical Issues found: **Auto-fix** or Request User Review.
 - **Output**: `audit-report.md` + Final `article.md`
 
-## 9. Final Delivery
+## 10. Final Delivery
 - Notify user of completion.
 - List all artifacts: `search-intent.md`, `research.md`, `competitor-insights.md`, `outline.md`, `article.md`, `audit-report.md`.
