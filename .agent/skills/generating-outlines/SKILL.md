@@ -51,13 +51,19 @@ ELSE:
 *   **H2 [Cluster 1]**:
     *   *Intent*: What/Who?
     *   *Entities*: [List]
+    *   **CRITICAL RULE (H3 Breakdown)**: If an H2 section is expected to be long or covers multiple facets (e.g., "4 factors", "5 risks", "Pricing tiers"), you **MUST** break it down into multiple H3 (`###`) subheadings. Do not allow a wall of text under a single H2.
+    *   *H3 Subheading 1*: [Topic A]
+    *   *H3 Subheading 2*: [Topic B]
 *   **H2 [Cluster 2]**:
     *   *Intent*: How/Process?
     *   *Format*: List or Table.
+    *   *H3 Subheading*: [...]
 
 **IV. Semantic Expansion (Authority)**
 *   **H2**: Comparison (X vs Y).
+    *   *H3 Subheading*: [...]
 *   **H2**: Common Mistakes / Advanced Tips.
+    *   *H3 Subheading*: [...]
 *   Context: Demonstrate E-E-A-T.
 
 **V. FAQ (Featured Snippets)**
@@ -82,6 +88,9 @@ Generate the outline in Markdown format.
 
 □ Are H2s distinct query clusters?
   → Avoid H2s that just look like generic essay headers; they should map to search demand.
+
+□ Did I break down complex H2s into H3 subheadings?
+  → Essential for readability and SEO. No long sections without `###` subheadings.
 
 □ Is the "Freshness" year updated to 2026?
   → Check titles and headings.

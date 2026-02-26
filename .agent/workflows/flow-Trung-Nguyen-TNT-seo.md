@@ -85,7 +85,7 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     2.  **Simplicity Audit**: Enforce clarity for factory owners.
     3.  **Tone Audit**: Apply "Industrial Engineer" and "Problem-Solver" filters.
     4.  **Signature**: Ensure correct Signature from `central-entity-Trung-Nguyen-TNT.md`.
-    5.  **Expert Remarks**: Inject 1-2 `> **Kỹ sư Trung Nguyên TNT:**` blocks (as defined in `skill-persona-Trung-Nguyen-TNT.md`).
+8.  **Expert Remarks**: Inject 1-2 blockquotes containing expert advice or warnings. DO NOT prefix these quotes with "Kỹ sư Trung Nguyên TNT:" or any brand name. They should stand alone as objective expert insights (as defined in `skill-persona-Trung-Nguyen-TNT.md`).
 - **Output**: `article.md` (Trung Nguyên TNT Branded Version)
 
 ## 8. Phase 7: Visual Enhancement
@@ -99,7 +99,18 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     3.  **Insert**: Add `![Alt](Url)` to `article.md`.
 - **Output**: `article.md` (Visualized Version)
 
-## 9. Phase 8: Final Audit & Validation
+## 9. Phase 8: Fact-Checking & Deep Research
+**Goal**: Safeguard against AI hallucinations. Verify all technical, pricing, and structural capabilities of the machine against the source of truth.
+
+- **Skill**: `.agent/skills/rechecking-facts/SKILL.md`
+- **Input**: `article.md` (Visualized Version)
+- **Action**:
+    - Extract verifiable claims (prices, specs, performance metrics).
+    - Perform deep targeted research using `search_web`.
+    - Directly correct any inaccurate facts or hallucinated specs in the article.
+- **Output**: `fact-check-report.md` + Corrected `article.md`
+
+## 10. Phase 9: Final Audit & Validation
 **Goal**: Zero-defect delivery. Ensure the article matches Research, Outline, AND Persona.
 
 - **Skill**: `.agent/skills/auditing-content/SKILL.md`
@@ -117,4 +128,4 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
 
 ## 10. Final Delivery
 - Notify user of completion.
-- List all artifacts: `search-intent.md`, `research.md`, `competitor-insights.md`, `outline.md`, `article.md`, `audit-report.md`.
+- List all artifacts: `search-intent.md`, `research.md`, `competitor-insights.md`, `outline.md`, `fact-check-report.md`, `article.md`, `audit-report.md`.

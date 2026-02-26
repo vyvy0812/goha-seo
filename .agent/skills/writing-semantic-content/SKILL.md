@@ -54,6 +54,9 @@ Follow the structure strictly:
     *   **Bad**: "Cách Làm Bánh Tiramisu Ngon" (Title Case - English Style).
     *   **Good**: "Cách làm bánh tiramisu ngon" (Sentence Case - Vietnamese Style).
     *   **Strict Rule**: Never capitalize every word in a heading.
+2.  **H3 Subheading Enforcement (No Walls of Text)**: 
+    *   If an H2 section is longer than 200-300 words or covers multiple distinct points (e.g., benefits, factors, risks), you **MUST** break it down into `###` (H3) subheadings. 
+    *   Do not write 4-5 long paragraphs consecutively under a single H2. Use H3s to label each specific point (e.g., `### 1. Công suất động cơ`, `### 2. Chất liệu dao băm`).
 3.  **NO Nested Bullets**: Do not nest lists deeper than 1 level. Keep it flat.
 4.  **Length**: Minimum **2500 words** for deep coverage. If the content is short, expand sections with examples, case studies, or deeper analysis.
 5.  **Language**: Write in 100% Vietnamese. Do NOT use English words unless they are unavoidable technical terms (check with User first) or standard abbreviations (e.g., ISO, HACCP). Translate terms like "Labeling" to "Ghi nhãn".

@@ -32,15 +32,15 @@ This workflow automates the creation of high-quality SEO content based on the Se
 
 
 
-## 5. Phase 4: Content Audit & Refinement
-- **Skill**: `.agent/skills/auditing-content/SKILL.md`
-- **Input**: `article.md` + `outline.md` + `research.md`
-- **Output**: `audit_report.md` (and optionally refined `article.md`)
-- **Goal**: Verify structural integrity, entity coverage, and search intent alignment. Refine if necessary.
+## 5. Phase 4: Fact-Checking & Deep Research
+- **Skill**: `.agent/skills/rechecking-facts/SKILL.md`
+- **Input**: `article.md`
+- **Output**: `fact_check_report.md` (and corrected `article.md`)
+- **Goal**: Safeguard against AI hallucinations. Verify all technical claims, pricing, and entities against authoritative sources.
 
 ## 6. Final Output
 - Notify user that the process is complete.
-- Provide paths to all 3 artifacts: `research.md`, `outline.md`, `article.md`.
+- Provide paths to all 4 artifacts: `research.md`, `outline.md`, `fact-check-report.md`, `article.md`.
 
 ---
 

@@ -102,7 +102,18 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     3.  **Insert**: Add `![Alt](Url)` to `article.md`.
 - **Output**: `article.md` (Visualized Version)
 
-## 9. Phase 8: Final Audit & Validation
+## 9. Phase 8: Fact-Checking & Deep Research
+**Goal**: Safeguard against AI hallucinations. Verify all F&B R&D claims, regulatory references (Decree/Laws), and ingredient properties against the source of truth.
+
+- **Skill**: `.agent/skills/rechecking-facts/SKILL.md`
+- **Input**: `article.md` (Visualized Version)
+- **Action**:
+    - Extract verifiable claims (laws, specs, application ratios).
+    - Perform deep targeted research using `search_web` or legal reference files.
+    - Directly correct any inaccurate facts or hallucinated regulations in the article.
+- **Output**: `fact-check-report.md` + Corrected `article.md`
+
+## 10. Phase 9: Final Audit & Validation
 **Goal**: Zero-defect delivery. Ensure the article matches Research, Outline, AND Persona.
 
 - **Skill**: `.agent/skills/auditing-content/SKILL.md`
@@ -120,4 +131,4 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
 
 ## 10. Final Delivery
 - Notify user of completion.
-- List all artifacts: `search-intent.md`, `research.md`, `competitor-insights.md`, `outline.md`, `article.md`, `audit-report.md`.
+- List all artifacts: `search-intent.md`, `research.md`, `competitor-insights.md`, `outline.md`, `fact-check-report.md`, `article.md`, `audit-report.md`.
