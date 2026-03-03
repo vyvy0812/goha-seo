@@ -61,6 +61,9 @@ Follow the structure strictly:
 4.  **Length**: Minimum **2500 words** for deep coverage. If the content is short, expand sections with examples, case studies, or deeper analysis.
 5.  **Language**: Write in 100% Vietnamese. Do NOT use English words unless they are unavoidable technical terms (check with User first) or standard abbreviations (e.g., ISO, HACCP). Translate terms like "Labeling" to "Ghi nhãn".
 6.  **Professional Tone**: No "Hey guys", no empty adjectives ("very", "extremely").
+7.  **Short Paragraph Rule (UX & Readability)**:
+    *   **Strict Limit**: Single paragraphs should NOT exceed **4 lines** in the editor.
+    *   **Action**: Break down complex ideas into 2-3 shorter paragraphs or use bullet points to avoid "walls of text" that discourage readers.
 
 ### Phase 4: Self-Correction
 

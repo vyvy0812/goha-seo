@@ -5,7 +5,8 @@ description: Premium B2B Semantic SEO Workflow with Trung Nguyên TNT Brand Inte
 # Trung Nguyên TNT Branded SEO Workflow
 
 This is the **Premium Content Pipeline** for Trung Nguyên TNT (The Automation Engineer).
-It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, and the **Trung Nguyên TNT Brand Persona** ("Efficiency through Automation").
+It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking (Flow Alignment)**, and the **Trung Nguyên TNT Brand Persona** ("Helpful Industrial Engineer").
+9: **MANDATORY**: Minimum **2500 words** with deep "Technical Gap Content".
 
 **Command:** `/trung-nguyen-seo [keyword]`
 
@@ -18,25 +19,28 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `Persona Brand/Trung Nguyên TNT/source-context-Trung-Nguyen-TNT.md`
     - `Persona Brand/Trung Nguyên TNT/central-entity-Trung-Nguyen-TNT.md`
 
-## 2. Phase 1: Search Intent Analysis (New)
-**Goal**: Decode the user's hidden Micro-Intent (Know/Do/Go) before researching.
+## 2. Phase 1: Search Intent Analysis (Optimized)
+**Goal**: Decode the user's hidden Micro-Intent (Know/Do/Go) using live SERP data.
 
+- **Action**: Use `search_web [keyword]` to analyze SERP features:
+    - If **Local Pack**: Searcher is looking for nearby factories/suppliers.
+    - If **Featured Snippet**: Informational (Know).
 - **Skill**: `.agent/skills/analyzing-search-intent/SKILL.md`
-- **Input**: Target Keyword
 - **Output**: `search-intent.md`
 
-## 3. Phase 2: Semantic & Contextual Research
-**Goal**: Establish the semantic foundation filtered by Industrial Automation intent.
+## 3. Phase 2: Semantic & Contextual Research (Optimized)
+**Goal**: Establish the semantic foundation with real-time industrial entity discovery.
 
+- **Action**: Use `search_web` with operators:
+    - `"máy [keyword] thông số kỹ thuật"` to find machine specs.
+    - `site:trungnguyentnt.vn "[keyword]"` to verify existing brand alignment.
 - **Skill**: `.agent/skills/extracting-keywords/SKILL.md`
 - **Inputs**:
     - Target Keyword
-    - `search-intent.md` (To align keywords with the verified intent)
-    - `Persona Brand/Trung Nguyên TNT/source-context-Trung-Nguyen-TNT.md` (To filter for Plastics/Automation relevance)
-    - `.agent/skills/analyzing-semantic-seo/references/entity-patterns.md` (For entity extraction rules)
-- **Constraint**: Must use the "Automation Focus" and "Taiwan Quality" lens from `source-context-Trung-Nguyen-TNT.md` when selecting entities.
-- **Constraint**: Ensure "Máy chấm keo PVC" (PVC Dispensing Machines) are EXCLUDED from the research unless the keyword specifically targets them.
-- **Output**: `research.md` (Use **Template 2** from `references/output-templates.md` but enhanced with "Brand Context" notes).
+    - `search-intent.md`
+    - `Persona Brand/Trung Nguyên TNT/source-context-Trung-Nguyen-TNT.md`
+- **Constraint**: Ensure "Máy chấm keo PVC" are EXCLUDED unless specifically targeted.
+- **Output**: `research.md` (Integrate live specs and brand context).
 
 ## 4. Phase 3: Competitor Intelligence (Turbo)
 **Goal**: Benchmark against top ranking content structures.
@@ -57,7 +61,9 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `research.md`
     - `competitor-insights.md`
     - `Persona Brand/Trung Nguyên TNT/central-entity-Trung-Nguyen-TNT.md` (To map relevant Machines & Solutions)
-- **Constraint**: MUST map at least one Trung Nguyên TNT Machine/Solution (from `central-entity`) as a key solution in the outline. EXCLUDE "Máy chấm keo PVC" (PVC Dispensing Machines) unless explicitly requested.
+- **Constraint**: MUST map at least one Trung Nguyên TNT Machine/Solution (from `central-entity`) as a key solution in the outline.
+- **MANDATORY STRUCTURE**: Follow top competitors' successful flow (likely: Definitions -> Deep Comparison -> Selection Guide -> FAQ).
+- **MANDATORY DEPTH**: Must plan for 2500+ words by including Technical Data Sheets (TDS), polymer physics, and "Gap Content" (e.g., Burn tests) identified in Phase 3.
 - **Output**: `outline.md`
 
 ## 6. Phase 5: Authority Writing (Drafting)
@@ -71,8 +77,9 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `Persona Brand/Trung Nguyên TNT/source-context-Trung-Nguyen-TNT.md` (Mandatory Stylistic Context)
 - **Constraint**: 
     1. Writer must follow "Trung Nguyên TNT" identity.
-    2. Maintain "Technical & Accurate" voice (No Fluff, Data Speaks) as per `skill-persona-Trung-Nguyen-TNT.md`. 
+    2. Maintain "Helpful Industrial Engineer" voice (Value-First, Non-Promotional) as per `skill-persona-Trung-Nguyen-TNT.md`. 
     3. Follow the "Machine-Efficiency" Rule (Translate features to economic value).
+    4. **Word Count**: Target **2500+ words** by providing exhaustive technical detail.
 - **Output**: `article.md` (Draft 1)
 
 ## 7. Phase 6: Trung Nguyên TNT Brand Calibration
@@ -99,15 +106,14 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     3.  **Insert**: Add `![Alt](Url)` to `article.md`.
 - **Output**: `article.md` (Visualized Version)
 
-## 9. Phase 8: Fact-Checking & Deep Research
-**Goal**: Safeguard against AI hallucinations. Verify all technical, pricing, and structural capabilities of the machine against the source of truth.
+## 9. Phase 8: Fact-Checking & Deep Research (Optimized)
+**Goal**: 100% technical accuracy via targeted search validation.
 
 - **Skill**: `.agent/skills/rechecking-facts/SKILL.md`
-- **Input**: `article.md` (Visualized Version)
-- **Action**:
-    - Extract verifiable claims (prices, specs, performance metrics).
-    - Perform deep targeted research using `search_web`.
-    - Directly correct any inaccurate facts or hallucinated specs in the article.
+- **Action**: Use `search_web` with **Advanced Operators**:
+    - `"[Machine_Model] datasheet"` to verify performance metrics.
+    - `site:trungnguyentnt.vn` to confirm pricing or warranty claims.
+    - Search for economic benefit metrics (e.g., labor reduction rates in plastics industry).
 - **Output**: `fact-check-report.md` + Corrected `article.md`
 
 ## 10. Phase 9: Final Audit & Validation

@@ -18,34 +18,37 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `Persona Brand/GOHA/source-context-GOHA.md`
     - `Persona Brand/GOHA/central-entity-GOHA.md`
 
-## 2. Phase 1: Search Intent Analysis (New)
-**Goal**: Decode the user's hidden Micro-Intent (Know/Do/Go) before researching.
+## 2. Phase 1: Search Intent Analysis (Optimized)
+**Goal**: Decode the user's hidden Micro-Intent (Know/Do/Go) using live SERP data.
 
+- **Action**: Use `search_web [keyword]` to analyze SERP features:
+    - If **Featured Snippet**: Informational (Know).
+    - If **People Also Ask**: Query Clusters.
+    - If **Ads/Products**: Transactional (Do).
 - **Skill**: `.agent/skills/analyzing-search-intent/SKILL.md`
-- **Input**: Target Keyword
 - **Output**: `search-intent.md`
 
-## 3. Phase 2: Semantic & Contextual Research
-**Goal**: Establish the semantic foundation filtered by B2B intent.
+## 3. Phase 2: Semantic & Contextual Research (Optimized)
+**Goal**: Establish the semantic foundation with real-time entity discovery.
 
+- **Action**: Use `search_web` with operators:
+    - `"định nghĩa [keyword]"` to find core entities.
+    - `site:.gov.vn OR site:.edu.vn "[keyword]"` for authority context.
 - **Skill**: `.agent/skills/extracting-keywords/SKILL.md`
 - **Inputs**:
     - Target Keyword
-    - `search-intent.md` (To align keywords with the verified intent)
-    - `Persona Brand/GOHA/source-context-GOHA.md` (To filter for B2B relevance)
-    - `.agent/skills/analyzing-semantic-seo/references/entity-patterns.md` (For entity extraction rules)
-- **Constraint**: Must use the "B2B Performance Marketing" lens from `source-context-GOHA.md` when selecting entities.
-- **Output**: `research.md` (Use **Template 2** from `references/output-templates.md` but enhanced with "Brand Context" notes).
+    - `search-intent.md`
+    - `Persona Brand/GOHA/source-context-GOHA.md`
+- **Output**: `research.md` (Must include real-time entities found via search).
 
 ## 4. Phase 3: Competitor Intelligence (Turbo)
 **Goal**: Benchmark against top ranking content structures.
 
 // turbo
 - **Skill**: `.agent/skills/analyzing-competitors/SKILL.md`
-- **Action**: Use the `browser_subagent` tool to perform a live Google search for the target keyword on the user's machine.
-- **Action**: Create a subdirectory `competitors/` inside the keyword folder.
-- **Action**: Visit the Top 3 Organic Results. Extract H1, H2, H3 headers and save each to `competitors/competitor_[n]_[domain].md`.
-- **Output**: `competitor-insights.md` (Save summary in root, raw details in `competitors/`)
+- **Action**: Use the `browser_subagent` tool for a live Google search. Focus on "Results from last year" for freshness.
+- **Action**: Visit Top 3 results. Extract H1-H3.
+- **Output**: `competitor-insights.md`
 
 ## 5. Phase 4: Strategic Outline
 **Goal**: Create a superior outline merging semantic data, competitor gaps, and GOHA services.

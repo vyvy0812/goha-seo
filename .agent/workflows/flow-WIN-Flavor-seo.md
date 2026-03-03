@@ -18,27 +18,28 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `Persona Brand/MQ - WIN Flavor/source-context-WIN-Flavor.md`
     - `Persona Brand/MQ - WIN Flavor/central-entity-WIN-Flavor.md`
 
-## 2. Phase 1: Search Intent Analysis (New)
-**Goal**: Decode the user's hidden Micro-Intent (Know/Do/Go) before researching.
+## 2. Phase 1: Search Intent Analysis (Optimized)
+**Goal**: Decode the user's hidden Micro-Intent (Know/Do/Go) using live SERP data.
 
+- **Action**: Use `search_web [keyword]` to analyze current SERP features (Featured Snippets, Shopping, PAA) to confirm Micro-Intent.
 - **Skill**: `.agent/skills/analyzing-search-intent/SKILL.md`
-- **Input**: Target Keyword
 - **Output**: `search-intent.md`
 
-## 3. Phase 2: Semantic & Contextual Research
-**Goal**: Establish the semantic foundation filtered by F&B R&D intent.
+## 3. Phase 2: Semantic & Contextual Research (Optimized)
+**Goal**: Establish the semantic foundation with real-time entity and regulatory discovery.
 
+- **Action**: Use `search_web` with operators:
+    - `"nghiên cứu [keyword]"` or `"thành phần [keyword]"` to find technical entities.
+    - `site:vfa.gov.vn OR site:moh.gov.vn "[keyword]"` for official F&B regulations.
 - **Skill**: `.agent/skills/extracting-keywords/SKILL.md`
 - **Inputs**:
     - Target Keyword
-    - `search-intent.md` (To align keywords with the verified intent)
-    - `Persona Brand/MQ - WIN Flavor/source-context-WIN-Flavor.md` (To filter for F&B/Ingredient relevance)
-    - `.agent/skills/analyzing-semantic-seo/references/entity-patterns.md` (For entity extraction rules)
-- **Constraint**: Must use the "Ingredient-First" and "R&D Solutionist" lens from `source-context-WIN-Flavor.md` when selecting entities.
-- **Legal Check**: If topic involves Regulations, Food Safety, Labeling, or Additives:
-    -   **Load Input**: `Persona Brand/MQ - WIN Flavor/legal-references-2026.md`.
-    -   **Action**: Extract relevant Law/Decree entities and add to `research.md`.
-- **Output**: `research.md` (Use **Template 2** from `references/output-templates.md` but enhanced with "Brand Context" notes).
+    - `search-intent.md`
+    - `Persona Brand/MQ - WIN Flavor/source-context-WIN-Flavor.md`
+- **Legal Check**: If topic involves Regulations:
+    - **Load Input**: `Persona Brand/MQ - WIN Flavor/legal-references-2026.md`.
+    - **Search**: Use `search_web` to check for 2026 updates to Decree 15/148.
+- **Output**: `research.md` (Must aggregate live search data and brand context).
 
 ## 4. Phase 3: Competitor Intelligence (Turbo)
 **Goal**: Benchmark against top ranking content structures.
@@ -102,15 +103,14 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     3.  **Insert**: Add `![Alt](Url)` to `article.md`.
 - **Output**: `article.md` (Visualized Version)
 
-## 9. Phase 8: Fact-Checking & Deep Research
-**Goal**: Safeguard against AI hallucinations. Verify all F&B R&D claims, regulatory references (Decree/Laws), and ingredient properties against the source of truth.
+## 9. Phase 8: Fact-Checking & Deep Research (Optimized)
+**Goal**: 100% scientific accuracy via targeted validation.
 
 - **Skill**: `.agent/skills/rechecking-facts/SKILL.md`
-- **Input**: `article.md` (Visualized Version)
-- **Action**:
-    - Extract verifiable claims (laws, specs, application ratios).
-    - Perform deep targeted research using `search_web` or legal reference files.
-    - Directly correct any inaccurate facts or hallucinated regulations in the article.
+- **Action**: Use `search_web` with **Advanced Operators**:
+    - `site:vfa.gov.vn "[Decree_Number]"` to verify regulatory compliance.
+    - `"[Chemical_Name] solubility/dosage"` to verify technical specs.
+    - Search for WIN Flavor specific solutions in `central-entity-WIN-Flavor.md` to ensure correct attribution.
 - **Output**: `fact-check-report.md` + Corrected `article.md`
 
 ## 10. Phase 9: Final Audit & Validation
