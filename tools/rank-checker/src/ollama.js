@@ -5,10 +5,57 @@
  * Drop-in replacement for gemini.js with same interface.
  */
 
+const { spawn, execSync } = require('child_process');
+
 const OLLAMA_BASE = process.env.OLLAMA_URL || 'http://localhost:11434';
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'gemma3:4b';
+const OLLAMA_EXE = process.env.OLLAMA_PATH || 'C:\\Users\\MSI\\AppData\\Local\\Programs\\Ollama\\ollama.exe';
+
+let ollamaProcess = null;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+/**
+ * Start Ollama process
+ */
+async function startOllama() {
+    if (await isAvailable()) return { started: false, message: 'Already running' };
+
+    try {
+        ollamaProcess = spawn(OLLAMA_EXE, ['serve'], {
+            detached: true,
+            stdio: 'ignore',
+            windowsHide: true,
+        });
+        ollamaProcess.unref();
+
+        // Wait up to 10s for Ollama to be ready
+        for (let i = 0; i < 20; i++) {
+            await sleep(500);
+            if (await isAvailable()) {
+                console.log('[Ollama] ✅ Started successfully');
+                return { started: true, message: 'Ollama started' };
+            }
+        }
+        return { started: false, message: 'Ollama started but not responding' };
+    } catch (err) {
+        return { started: false, message: err.message };
+    }
+}
+
+/**
+ * Stop Ollama process
+ */
+async function stopOllama() {
+    try {
+        execSync('taskkill /F /IM ollama.exe /T 2>nul', { stdio: 'ignore' });
+        ollamaProcess = null;
+        console.log('[Ollama] ⏹ Stopped');
+        return { stopped: true };
+    } catch {
+        return { stopped: false, message: 'Ollama not running or cannot stop' };
+    }
+}
 
 /**
  * Check if Ollama is available
@@ -181,4 +228,6 @@ module.exports = {
     classifyIntents,
     isAvailable,
     getModelInfo,
+    startOllama,
+    stopOllama,
 };

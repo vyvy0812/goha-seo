@@ -502,6 +502,17 @@ app.get('/api/ai/provider', async (req, res) => {
     });
 });
 
+// Start/Stop Ollama from Dashboard
+app.post('/api/ai/ollama/start', async (req, res) => {
+    const result = await ollama.startOllama();
+    res.json(result);
+});
+
+app.post('/api/ai/ollama/stop', async (req, res) => {
+    const result = await ollama.stopOllama();
+    res.json(result);
+});
+
 app.get('/api/ai/insights/:project', async (req, res) => {
     try {
         await db.initDatabase();
