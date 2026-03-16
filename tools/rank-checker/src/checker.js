@@ -227,29 +227,109 @@ async function detectSerpFeatures(page) {
     try {
         return await page.evaluate(() => {
             const features = [];
-            // Featured Snippet
             if (document.querySelector('.xpdopen, .ifM9O, .g.mnr-c.g-blk, [data-attrid="wa:/description"]'))
                 features.push('Featured Snippet');
-            // People Also Ask
             if (document.querySelector('.related-question-pair, [data-sgrd], .wQiwMc'))
                 features.push('PAA');
-            // Video Carousel
             if (document.querySelector('.HD8Pae, .RzdJxc, video-voyager'))
                 features.push('Video');
-            // Knowledge Panel
             if (document.querySelector('.kp-wholepage, .osrp-blk, .knowledge-panel'))
                 features.push('Knowledge Panel');
-            // Image Pack
             if (document.querySelector('.immersive-carousel, .F9rcV, .ivg-i'))
                 features.push('Images');
-            // Local Pack
             if (document.querySelector('.VkpGBb, .cXedhc, [data-local-attribute]'))
                 features.push('Local Pack');
-            // Sitelinks
             if (document.querySelector('.usJj9c, .HiHjCd'))
                 features.push('Sitelinks');
             return features;
         });
+    } catch {
+        return [];
+    }
+}
+
+/**
+ * Extract "People Also Ask" questions from SERP
+ */
+async function extractPAA(page) {
+    try {
+        return await page.evaluate(() => {
+            const questions = [];
+            // Multiple selectors for PAA questions across Google layouts
+            const selectors = [
+                '.related-question-pair [data-q]',
+                '.wQiwMc [data-q]',
+                '[data-sgrd] [role="heading"]',
+                '.related-question-pair span',
+            ];
+            for (const sel of selectors) {
+                document.querySelectorAll(sel).forEach(el => {
+                    const q = el.getAttribute('data-q') || el.textContent?.trim();
+                    if (q && q.length > 5 && !questions.includes(q)) questions.push(q);
+                });
+                if (questions.length > 0) break;
+            }
+            return questions.slice(0, 8);
+        });
+    } catch {
+        return [];
+    }
+}
+
+/**
+ * Extract "Related Searches" from bottom of SERP
+ */
+async function extractRelatedSearches(page) {
+    try {
+        return await page.evaluate(() => {
+            const related = [];
+            const selectors = [
+                '#botstuff .k8XOCe a',           // "Related searches" section
+                '.Oj5Ld a',                       // Alternative layout
+                '#brs a .s75CSd',                 // Older layout: text inside link
+                '.AJLUJb a .eONsm',              // Another variation
+                '.k8XOCe .s75CSd',               // Text spans
+            ];
+            for (const sel of selectors) {
+                document.querySelectorAll(sel).forEach(el => {
+                    const text = el.textContent?.trim();
+                    if (text && text.length > 2 && !related.includes(text)) related.push(text);
+                });
+                if (related.length > 0) break;
+            }
+            return related.slice(0, 8);
+        });
+    } catch {
+        return [];
+    }
+}
+
+/**
+ * Extract top competitor URLs + titles from SERP (excluding target domain)
+ */
+async function extractTopCompetitors(page, targetDomain) {
+    try {
+        const normalizedTarget = normalizeDomain(targetDomain);
+        return await page.evaluate((target) => {
+            const competitors = [];
+            const results = document.querySelectorAll('#res .tF2Cxc, .yuRUbf');
+            results.forEach(el => {
+                const linkEl = el.querySelector('a[href]');
+                const titleEl = el.querySelector('h3') || linkEl?.querySelector('h3');
+                if (!linkEl) return;
+                const url = linkEl.href || linkEl.getAttribute('href') || '';
+                const title = titleEl?.textContent?.trim() || '';
+                if (!url || url.includes('google.com')) return;
+                try {
+                    const domain = new URL(url).hostname.replace(/^www\./, '');
+                    if (target && domain.endsWith(target)) return; // Skip own domain
+                    if (!competitors.find(c => c.domain === domain)) {
+                        competitors.push({ url, title, domain });
+                    }
+                } catch { }
+            });
+            return competitors.slice(0, 5);
+        }, normalizedTarget);
     } catch {
         return [];
     }
@@ -295,13 +375,23 @@ async function searchKeyword(page, keyword, domain, uuleCode, maxPages = DEFAULT
     // Detect SERP features on first page
     const serpFeatures = await detectSerpFeatures(page);
 
+    // Extract SERP intelligence data (PAA, Related Searches, Competitors)
+    const paa = await extractPAA(page);
+    const relatedSearches = await extractRelatedSearches(page);
+    const competitors = await extractTopCompetitors(page, domain);
+    const serpData = { paa, relatedSearches, competitors };
+
+    if (paa.length > 0) console.log(`  📋 PAA: ${paa.length} questions`);
+    if (relatedSearches.length > 0) console.log(`  🔗 Related: ${relatedSearches.length} suggestions`);
+    if (competitors.length > 0) console.log(`  🏆 Competitors: ${competitors.map(c => c.domain).join(', ')}`);
+
     // Search through pages
     for (let pageIdx = 0; pageIdx < maxPages; pageIdx++) {
         // Wait for page to load
         try {
             await page.waitForFunction(() => document.readyState === 'complete', { timeout: 15000 });
         } catch {
-            return { url: `[x] -- Trang ${pageIdx} tải quá thời gian chờ`, page: '-', pos: posFound, rank, local: localText };
+            return { url: `[x] -- Trang ${pageIdx} tải quá thời gian chờ`, page: '-', pos: posFound, rank, local: localText, serpData };
         }
 
         // Check for CAPTCHA and try to solve
@@ -310,7 +400,6 @@ async function searchKeyword(page, keyword, domain, uuleCode, maxPages = DEFAULT
             consecutiveCaptchas++;
             console.log(`🛡️ CAPTCHA #${consecutiveCaptchas} detected (${captcha.type}) for "${keyword}"`);
 
-            // Step 1: Try solving CAPTCHA first (don't touch WARP during active search)
             const solved = await captchaSolver.solveCaptcha(page, {
                 maxRetries: 3,
                 keyword,
@@ -324,10 +413,8 @@ async function searchKeyword(page, keyword, domain, uuleCode, maxPages = DEFAULT
                     await page.waitForSelector('.tF2Cxc, .yuRUbf', { timeout: SEARCH_RESULT_TIMEOUT });
                 } catch { }
             } else {
-                // Step 2: Solve failed → return result, WARP reset happens AFTER browser closes
                 console.log(`❌ CAPTCHA not solved for "${keyword}" — will reset WARP after closing browser`);
-                // Mark for WARP reset (happens in checkSingleKeyword after browser.close)
-                return { url: '[x] -- CAPTCHA (unsolved)', page: '-', pos: posFound, rank, local: localText, captcha: true, needWarpReset: true };
+                return { url: '[x] -- CAPTCHA (unsolved)', page: '-', pos: posFound, rank, local: localText, captcha: true, needWarpReset: true, serpData };
             }
         } else {
             // No CAPTCHA — reset counter
@@ -350,6 +437,7 @@ async function searchKeyword(page, keyword, domain, uuleCode, maxPages = DEFAULT
                         rank: totalCount + i + 1,
                         local: localText,
                         serpFeatures,
+                        serpData,
                     };
                 }
             } catch { }
@@ -365,7 +453,7 @@ async function searchKeyword(page, keyword, domain, uuleCode, maxPages = DEFAULT
         }
     }
 
-    return { url: resultUrl, page: pageFound, pos: posFound, rank, local: localText, serpFeatures };
+    return { url: resultUrl, page: pageFound, pos: posFound, rank, local: localText, serpFeatures, serpData };
 }
 
 // ============ Checker Orchestrator ============
@@ -627,6 +715,10 @@ async function startChecker({ project, domain, keywords, options = {}, db = null
                                         date: dateStr,
                                         time: timeStr,
                                     }]);
+                                    // Save SERP intelligence data (PAA, Related, Competitors)
+                                    if (result.serpData) {
+                                        db.saveSerpData(project, kw, result.serpData);
+                                    }
                                 } catch (dbErr) {
                                     console.error(`[Checker] DB save error for "${kw}":`, dbErr.message);
                                 }

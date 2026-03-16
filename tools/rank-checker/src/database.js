@@ -68,6 +68,18 @@ function initDatabase() {
       )
     `);
     db.run(`CREATE INDEX IF NOT EXISTS idx_ai_project ON ai_insights(project)`);
+    db.run(`
+      CREATE TABLE IF NOT EXISTS serp_data (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        keyword_id INTEGER NOT NULL,
+        paa_json TEXT,
+        related_json TEXT,
+        competitors_json TEXT,
+        collected_at TEXT DEFAULT (datetime('now')),
+        FOREIGN KEY (keyword_id) REFERENCES keywords(id)
+      )
+    `);
+    db.run(`CREATE INDEX IF NOT EXISTS idx_serp_keyword ON serp_data(keyword_id)`);
 
     saveDb();
     return db;
@@ -389,6 +401,48 @@ function deleteProject(project) {
   return { keywords: kw, rankings: rk };
 }
 
+// ============ SERP Intelligence Data ============
+
+function saveSerpData(project, keyword, serpData) {
+  if (!db || !serpData) return;
+  const row = queryOne('SELECT id FROM keywords WHERE project = ? AND keyword = ?', [project, keyword]);
+  if (!row) return;
+  const kwId = row.id;
+
+  runSql(`INSERT INTO serp_data (keyword_id, paa_json, related_json, competitors_json)
+            VALUES (?, ?, ?, ?)`,
+    [kwId,
+      JSON.stringify(serpData.paa || []),
+      JSON.stringify(serpData.relatedSearches || []),
+      JSON.stringify(serpData.competitors || []),
+    ]);
+  saveDb();
+}
+
+function getSerpData(project) {
+  return queryAll(`
+        SELECT k.keyword,
+               s.paa_json, s.related_json, s.competitors_json,
+               s.collected_at
+        FROM serp_data s
+        JOIN keywords k ON k.id = s.keyword_id
+        WHERE k.project = ?
+        AND s.id IN (
+            SELECT MAX(s2.id) FROM serp_data s2
+            JOIN keywords k2 ON k2.id = s2.keyword_id
+            WHERE k2.project = ?
+            GROUP BY s2.keyword_id
+        )
+        ORDER BY k.keyword
+    `, [project, project]).map(row => ({
+    keyword: row.keyword,
+    paa: JSON.parse(row.paa_json || '[]'),
+    relatedSearches: JSON.parse(row.related_json || '[]'),
+    competitors: JSON.parse(row.competitors_json || '[]'),
+    collectedAt: row.collected_at,
+  }));
+}
+
 module.exports = {
   initDatabase,
   getKeywords,
@@ -405,4 +459,6 @@ module.exports = {
   wipeRankings,
   deleteKeywords,
   deleteProject,
+  saveSerpData,
+  getSerpData,
 };

@@ -3,6 +3,7 @@ const path = require('path');
 const db = require('./src/database');
 const sheets = require('./src/sheets');
 const gemini = require('./src/gemini');
+const ollama = require('./src/ollama');
 const checker = require('./src/checker');
 const warp = require('./src/warp');
 const scheduler = require('./src/scheduler');
@@ -417,6 +418,60 @@ app.post('/api/settings', (req, res) => {
     }
 });
 
+// ============ SERP Intelligence Data ============
+
+app.get('/api/serp-data/:project', (req, res) => {
+    try {
+        const data = db.getSerpData(req.params.project);
+        // Aggregate: unique PAA questions, related searches, top competitors
+        const allPAA = {};
+        const allRelated = {};
+        const allCompetitors = {};
+
+        data.forEach(d => {
+            d.paa.forEach(q => { allPAA[q] = (allPAA[q] || 0) + 1; });
+            d.relatedSearches.forEach(r => { allRelated[r] = (allRelated[r] || 0) + 1; });
+            d.competitors.forEach(c => {
+                if (!allCompetitors[c.domain]) allCompetitors[c.domain] = { domain: c.domain, count: 0, urls: [] };
+                allCompetitors[c.domain].count++;
+                if (!allCompetitors[c.domain].urls.find(u => u.url === c.url)) {
+                    allCompetitors[c.domain].urls.push({ url: c.url, title: c.title });
+                }
+            });
+        });
+
+        res.json({
+            keywords: data,
+            aggregate: {
+                paa: Object.entries(allPAA).sort((a, b) => b[1] - a[1]).map(([q, count]) => ({ question: q, count })),
+                relatedSearches: Object.entries(allRelated).sort((a, b) => b[1] - a[1]).map(([r, count]) => ({ query: r, count })),
+                competitors: Object.values(allCompetitors).sort((a, b) => b.count - a.count),
+            },
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// ============ Ranking Trend ============
+
+app.get('/api/rankings/trend/:project', (req, res) => {
+    try {
+        const keyword = req.query.keyword;
+        if (keyword) {
+            // Single keyword trend
+            const history = db.getKeywordHistory(req.params.project, keyword, 60);
+            res.json({ keyword, history });
+        } else {
+            // All keywords latest rankings for project overview
+            const rankings = db.getLatestRankings(req.params.project);
+            res.json({ rankings });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 // ============ Google Sheets OAuth ============
 
 app.get('/api/sheets/auth-url', async (req, res) => {
@@ -432,15 +487,27 @@ app.get('/api/sheets/auth-url', async (req, res) => {
     }
 });
 
-// ============ AI Insights ============
+// ============ AI Insights (Ollama primary, Gemini fallback) ============
 
 const analysisProgress = {};
+
+// AI provider status
+app.get('/api/ai/provider', async (req, res) => {
+    const ollamaInfo = await ollama.getModelInfo();
+    const geminiAvailable = gemini.API_KEYS?.length > 0;
+    res.json({
+        active: ollamaInfo.available ? 'ollama' : (geminiAvailable ? 'gemini' : 'none'),
+        ollama: ollamaInfo,
+        gemini: { available: geminiAvailable, keys: gemini.API_KEYS?.length || 0 },
+    });
+});
 
 app.get('/api/ai/insights/:project', async (req, res) => {
     try {
         await db.initDatabase();
         const insights = db.getAiInsights(req.params.project);
-        res.json({ insights, hasKeys: gemini.API_KEYS.length > 0 });
+        const ollamaAvail = await ollama.isAvailable();
+        res.json({ insights, hasAI: ollamaAvail || gemini.API_KEYS?.length > 0 });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -454,9 +521,11 @@ app.get('/api/ai/progress/:project', (req, res) => {
 app.post('/api/ai/analyze/:project', async (req, res) => {
     try {
         const { project } = req.params;
+        const ollamaAvail = await ollama.isAvailable();
+        const geminiAvail = gemini.API_KEYS?.length > 0;
 
-        if (gemini.API_KEYS.length === 0) {
-            return res.status(400).json({ error: 'No Gemini API keys configured' });
+        if (!ollamaAvail && !geminiAvail) {
+            return res.status(400).json({ error: 'No AI available. Start Ollama or add Gemini API key.' });
         }
         if (analysisProgress[project]?.status === 'running') {
             return res.status(409).json({ error: 'Analysis already running' });
@@ -475,31 +544,70 @@ app.post('/api/ai/analyze/:project', async (req, res) => {
             url: r.url || '',
         }));
 
+        const provider = ollamaAvail ? 'ollama' : 'gemini';
         analysisProgress[project] = {
-            status: 'running', batch: 0,
-            totalBatches: Math.ceil(kwData.length / 200),
-            processed: 0, total: kwData.length,
+            status: 'running', provider, processed: 0, total: kwData.length,
             startedAt: new Date().toISOString(),
         };
 
-        res.json({ started: true, totalKeywords: kwData.length });
+        res.json({ started: true, provider, totalKeywords: kwData.length });
 
         try {
-            console.log(`[AI] Starting analysis for "${project}" (${kwData.length} keywords)...`);
-            const insights = await gemini.analyzeProject(project, kwData, (progress) => {
-                analysisProgress[project] = { status: 'running', ...progress };
-            });
+            console.log(`[AI] Starting ${provider} analysis for "${project}" (${kwData.length} keywords)...`);
+            let insights;
+
+            if (provider === 'ollama') {
+                insights = await ollama.analyzeKeywords(kwData, rankings);
+            } else {
+                insights = await gemini.analyzeProject(project, kwData, (progress) => {
+                    analysisProgress[project] = { status: 'running', provider, ...progress };
+                });
+            }
+
             db.saveAiInsights(project, insights);
-            analysisProgress[project] = {
-                status: 'done',
-                topics: insights.topics?.length || 0,
-                suggestions: insights.suggestions?.length || 0,
-            };
-            console.log(`[AI] ✅ Done: ${insights.topics?.length} topics, ${insights.suggestions?.length} suggestions`);
+            analysisProgress[project] = { status: 'done', provider };
+            console.log(`[AI] ✅ Analysis done via ${provider}`);
         } catch (err) {
             console.error(`[AI] ❌ Analysis failed:`, err.message);
             analysisProgress[project] = { status: 'error', error: err.message };
         }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Content Brief generation from SERP data
+app.post('/api/ai/content-brief', async (req, res) => {
+    try {
+        const { keyword, project } = req.body;
+        if (!keyword) return res.status(400).json({ error: 'Keyword required' });
+
+        const ollamaAvail = await ollama.isAvailable();
+        if (!ollamaAvail) return res.status(400).json({ error: 'Ollama not available. Start Ollama first.' });
+
+        // Get SERP data for this keyword
+        await db.initDatabase();
+        const serpDataAll = db.getSerpData(project || '');
+        const kwSerp = serpDataAll.find(s => s.keyword === keyword) || { paa: [], relatedSearches: [], competitors: [] };
+
+        const brief = await ollama.generateContentBrief(keyword, kwSerp);
+        res.json({ brief });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Intent classification
+app.post('/api/ai/intents', async (req, res) => {
+    try {
+        const { keywords } = req.body;
+        if (!keywords?.length) return res.status(400).json({ error: 'Keywords array required' });
+
+        const ollamaAvail = await ollama.isAvailable();
+        if (!ollamaAvail) return res.status(400).json({ error: 'Ollama not available' });
+
+        const result = await ollama.classifyIntents(keywords);
+        res.json(result);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
