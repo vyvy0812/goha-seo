@@ -935,6 +935,66 @@ async function openSettingsModal() {
             el.innerHTML = `<span style="color:var(--yellow)">⚠️ Chưa xác thực</span><br><a href="${data.authUrl}" onclick="closeSettingsModal()">Click để xác thực Google Sheets</a>`;
         }
     } catch { }
+
+    // Check Ollama status
+    await checkOllamaStatus();
+}
+
+let ollamaRunning = false;
+
+async function checkOllamaStatus() {
+    try {
+        const res = await fetch(`${API}/api/ai/provider`);
+        const data = await res.json();
+        const textEl = document.getElementById('ollamaStatusText');
+        const btnEl = document.getElementById('ollamaToggleBtn');
+        ollamaRunning = data.ollama?.available || false;
+
+        if (ollamaRunning) {
+            const model = data.ollama?.model || 'unknown';
+            textEl.innerHTML = `<span style="color:var(--green)">✅ Đang chạy</span> <span style="color:var(--text-dim);font-size:12px">(${model})</span>`;
+            btnEl.textContent = '⏹ Tắt Ollama';
+            btnEl.style.background = 'var(--red, #ef4444)';
+        } else {
+            textEl.innerHTML = '<span style="color:var(--text-dim)">⏹ Đã tắt</span>';
+            btnEl.textContent = '▶ Bật Ollama';
+            btnEl.style.background = 'var(--green, #22c55e)';
+        }
+        btnEl.style.display = 'inline-block';
+        btnEl.style.color = '#fff';
+        btnEl.style.border = 'none';
+        btnEl.style.borderRadius = '6px';
+        btnEl.style.cursor = 'pointer';
+    } catch { }
+}
+
+async function toggleOllama() {
+    const btn = document.getElementById('ollamaToggleBtn');
+    const textEl = document.getElementById('ollamaStatusText');
+    btn.disabled = true;
+
+    if (ollamaRunning) {
+        btn.textContent = '⏳ Đang tắt...';
+        try {
+            await fetch(`${API}/api/ai/ollama/stop`, { method: 'POST' });
+            showToast('Ollama đã tắt — tiết kiệm RAM', 'info');
+        } catch { }
+    } else {
+        btn.textContent = '⏳ Đang khởi động...';
+        textEl.innerHTML = '<span style="color:var(--yellow)">⏳ Đang khởi động (~5s)...</span>';
+        try {
+            const res = await fetch(`${API}/api/ai/ollama/start`, { method: 'POST' });
+            const data = await res.json();
+            if (data.started) {
+                showToast('Ollama đã bật — sẵn sàng cho AI Insights', 'success');
+            } else {
+                showToast(data.message || 'Không thể khởi động Ollama', 'error');
+            }
+        } catch { }
+    }
+
+    btn.disabled = false;
+    await checkOllamaStatus();
 }
 
 function closeSettingsModal() {

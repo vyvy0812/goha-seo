@@ -390,6 +390,13 @@
                     <label>Google Sheets OAuth</label>
                     <div id="oauthStatus" class="oauth-status">Đang kiểm tra...</div>
                 </div>
+                <div class="form-group">
+                    <label>🧠 Ollama AI</label>
+                    <div id="ollamaStatus" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+                        <span id="ollamaStatusText" style="font-size:13px;color:var(--text-dim)">Đang kiểm tra...</span>
+                        <button id="ollamaToggleBtn" class="btn" onclick="toggleOllama()" style="font-size:12px;padding:4px 12px;display:none">⏳</button>
+                    </div>
+                </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" onclick="saveSettingsModal()">💾 Lưu</button>
                 </div>
