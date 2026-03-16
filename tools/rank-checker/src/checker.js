@@ -361,7 +361,7 @@ async function searchKeyword(page, keyword, domain, uuleCode, maxPages = DEFAULT
         if (pageIdx < maxPages - 1) {
             const hasNext = await clickNextPage(page);
             if (!hasNext) break;
-            await sleep(500 + Math.random() * 1000);
+            await sleep(2000 + Math.random() * 3000); // 2-5s between pages
         }
     }
 
@@ -523,6 +523,11 @@ async function checkSingleKeywordWithWarp(keyword, domain, uuleCode, maxPages = 
         }
     }
 
+    // Human-like delay between keywords (3-7 seconds random)
+    const kwDelay = 3000 + Math.random() * 4000;
+    console.log(`[Checker] ⏳ Waiting ${(kwDelay / 1000).toFixed(1)}s before next keyword...`);
+    await sleep(kwDelay);
+
     return result;
 }
 
@@ -650,7 +655,7 @@ async function startChecker({ project, domain, keywords, options = {}, db = null
 
                 // Small delay between chunks to avoid detection
                 if (chunkStart + chunkSize < keywords.length) {
-                    await sleep(1000 + Math.random() * 2000);
+                    await sleep(5000 + Math.random() * 5000); // 5-10s between chunks
                 }
             }
 
