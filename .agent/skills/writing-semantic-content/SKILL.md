@@ -74,7 +74,7 @@ Follow the structure strictly:
 
 As you write, check:
 *   **Entity Density**: Are we talking about the *concepts* or just the keyword?
-*   **Contextual Linking**: Do anchors describe the destination?
+*   **Contextual Linking**: Do anchors describe the destination? For **Home Credit** articles, load `Persona Brand/Home Credit/internal-links-database.md` to select 10–15 relevant URLs + anchor texts matching the article's context.
 *   **Terminology**: Use standard industry terms (e.g., "Standard Document", "Manual") instead of metaphors.
 
 ## Self-Check (Read before outputting)
