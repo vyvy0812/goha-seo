@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEO Audit Report — solarpowerpvsystem.com | GOHA SEO</title>
-    <meta name="description" content="Báo cáo phân tích SEO toàn diện cho solarpowerpvsystem.com tại thị trường Việt Nam">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Báo cáo phân tích SEO toàn diện cho solarpowerpvsystem.com tại thị trường Việt Nam">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-primary: #0a0e1a;
@@ -41,13 +44,20 @@
             color: var(--text-primary);
             line-height: 1.6;
             min-height: 100vh;
+            background-image: url('https://static.goha.vn/wp-content/uploads/2025/07/Background-1.png');
+            background-repeat: repeat;
+            background-size: 600px;
+            background-attachment: fixed;
         }
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 27, 75, 0.92) 50%, rgba(15, 23, 42, 0.92) 100%),
+                url('https://static.goha.vn/wp-content/uploads/2025/07/Background-1.png');
+            background-size: cover;
+            background-position: center;
             border-bottom: 1px solid var(--border);
-            padding: 2rem 0;
+            padding: 2.5rem 0 2rem;
             position: relative;
             overflow: hidden;
         }
@@ -59,8 +69,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(59,130,246,0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 50%, rgba(139,92,246,0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
         }
 
         .header-content {
@@ -86,6 +96,12 @@
             letter-spacing: 2px;
         }
 
+        .header-logo {
+            height: 40px;
+            width: auto;
+            filter: brightness(1.1);
+        }
+
         .date {
             font-size: 0.85rem;
             color: var(--text-muted);
@@ -107,8 +123,8 @@
 
         .header .domain-tag {
             display: inline-block;
-            background: rgba(59,130,246,0.15);
-            border: 1px solid rgba(59,130,246,0.3);
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
             color: var(--accent-blue);
             padding: 0.3rem 0.8rem;
             border-radius: 6px;
@@ -184,7 +200,7 @@
             justify-content: center;
             margin: 0 auto 1.5rem;
             position: relative;
-            background: rgba(239,68,68,0.05);
+            background: rgba(239, 68, 68, 0.05);
         }
 
         .score-circle::after {
@@ -243,7 +259,7 @@
         }
 
         .metric-card:hover {
-            border-color: rgba(59,130,246,0.3);
+            border-color: rgba(59, 130, 246, 0.3);
             transform: translateY(-2px);
         }
 
@@ -267,11 +283,25 @@
             margin-top: 0.3rem;
         }
 
-        .metric-value.red { color: var(--accent-red); }
-        .metric-value.yellow { color: var(--accent-yellow); }
-        .metric-value.green { color: var(--accent-green); }
-        .metric-value.blue { color: var(--accent-blue); }
-        .metric-value.purple { color: var(--accent-purple); }
+        .metric-value.red {
+            color: var(--accent-red);
+        }
+
+        .metric-value.yellow {
+            color: var(--accent-yellow);
+        }
+
+        .metric-value.green {
+            color: var(--accent-green);
+        }
+
+        .metric-value.blue {
+            color: var(--accent-blue);
+        }
+
+        .metric-value.purple {
+            color: var(--accent-purple);
+        }
 
         /* Tables */
         .table-wrapper {
@@ -287,7 +317,7 @@
         }
 
         thead {
-            background: rgba(59,130,246,0.08);
+            background: rgba(59, 130, 246, 0.08);
         }
 
         th {
@@ -303,7 +333,7 @@
 
         td {
             padding: 0.75rem 1rem;
-            border-bottom: 1px solid rgba(42,51,82,0.5);
+            border-bottom: 1px solid rgba(42, 51, 82, 0.5);
             color: var(--text-primary);
         }
 
@@ -312,7 +342,7 @@
         }
 
         tr:hover td {
-            background: rgba(59,130,246,0.03);
+            background: rgba(59, 130, 246, 0.03);
         }
 
         .status-dot {
@@ -323,9 +353,17 @@
             margin-right: 6px;
         }
 
-        .dot-red { background: var(--accent-red); }
-        .dot-yellow { background: var(--accent-yellow); }
-        .dot-green { background: var(--accent-green); }
+        .dot-red {
+            background: var(--accent-red);
+        }
+
+        .dot-yellow {
+            background: var(--accent-yellow);
+        }
+
+        .dot-green {
+            background: var(--accent-green);
+        }
 
         /* Score Badge */
         .score-badge {
@@ -338,9 +376,20 @@
             font-weight: 600;
         }
 
-        .badge-red { background: rgba(239,68,68,0.15); color: var(--accent-red); }
-        .badge-yellow { background: rgba(245,158,11,0.15); color: var(--accent-yellow); }
-        .badge-green { background: rgba(16,185,129,0.15); color: var(--accent-green); }
+        .badge-red {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--accent-red);
+        }
+
+        .badge-yellow {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-yellow);
+        }
+
+        .badge-green {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+        }
 
         /* Breakdown Cards */
         .breakdown-grid {
@@ -370,7 +419,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(42,51,82,0.3);
+            border-bottom: 1px solid rgba(42, 51, 82, 0.3);
         }
 
         .breakdown-item:last-child {
@@ -392,9 +441,17 @@
             transition: width 0.5s ease;
         }
 
-        .bar-red { background: var(--accent-red); }
-        .bar-yellow { background: var(--accent-yellow); }
-        .bar-green { background: var(--accent-green); }
+        .bar-red {
+            background: var(--accent-red);
+        }
+
+        .bar-yellow {
+            background: var(--accent-yellow);
+        }
+
+        .bar-green {
+            background: var(--accent-green);
+        }
 
         /* Highlight Box */
         .highlight-box {
@@ -441,8 +498,13 @@
             flex-shrink: 0;
         }
 
-        .highlight-box.strength li::before { background: var(--accent-green); }
-        .highlight-box.weakness li::before { background: var(--accent-red); }
+        .highlight-box.strength li::before {
+            background: var(--accent-green);
+        }
+
+        .highlight-box.weakness li::before {
+            background: var(--accent-red);
+        }
 
         /* SWOT Grid */
         .swot-grid {
@@ -477,18 +539,30 @@
             color: var(--text-secondary);
         }
 
-        .swot-s h4 { color: var(--accent-green); }
-        .swot-w h4 { color: var(--accent-red); }
-        .swot-o h4 { color: var(--accent-blue); }
-        .swot-t h4 { color: var(--accent-yellow); }
+        .swot-s h4 {
+            color: var(--accent-green);
+        }
+
+        .swot-w h4 {
+            color: var(--accent-red);
+        }
+
+        .swot-o h4 {
+            color: var(--accent-blue);
+        }
+
+        .swot-t h4 {
+            color: var(--accent-yellow);
+        }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             border-top: 1px solid var(--border);
             color: var(--text-muted);
             font-size: 0.82rem;
+            background: rgba(10, 14, 26, 0.85);
         }
 
         .footer a {
@@ -496,20 +570,58 @@
             text-decoration: none;
         }
 
+        .footer-logo {
+            height: 32px;
+            width: auto;
+            margin-bottom: 0.75rem;
+            opacity: 0.7;
+        }
+
+        /* Cards glass effect over background */
+        .score-hero,
+        .metric-card,
+        .breakdown-card,
+        .swot-card,
+        .table-wrapper {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
-            .header h1 { font-size: 1.5rem; }
-            .container { padding: 1rem; }
-            .metric-grid { grid-template-columns: repeat(2, 1fr); }
-            .breakdown-grid { grid-template-columns: 1fr; }
-            .swot-grid { grid-template-columns: 1fr; }
-            .score-circle { width: 120px; height: 120px; }
-            .score-number { font-size: 2.5rem; }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .metric-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .breakdown-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .swot-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .score-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .score-number {
+                font-size: 2.5rem;
+            }
         }
 
         /* Comparison Highlight */
         .comparison-row-highlight td {
-            background: rgba(59,130,246,0.05);
+            background: rgba(59, 130, 246, 0.05);
             font-weight: 600;
         }
 
@@ -522,18 +634,22 @@
         }
 
         .tag-client {
-            background: rgba(139,92,246,0.2);
+            background: rgba(139, 92, 246, 0.2);
             color: var(--accent-purple);
         }
     </style>
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header class="header">
         <div class="header-content">
             <div class="header-top">
-                <span class="brand">GOHA SEO AUDIT</span>
+                <a href="https://goha.vn" target="_blank" rel="noopener">
+                    <img src="https://static.goha.vn/wp-content/uploads/2025/06/Full.svg" alt="GOHA"
+                        class="header-logo">
+                </a>
                 <span class="date">23/03/2026 — Dữ liệu Semrush Mar 22, 2026</span>
             </div>
             <h1>Báo cáo phân tích SEO</h1>
@@ -551,7 +667,8 @@
                 <span class="score-total">/100</span>
             </div>
             <div class="score-label">🔴 XẾP HẠNG: YẾU</div>
-            <p class="score-desc">Website cần xây dựng lại chiến lược SEO từ nền tảng để có thể hiện diện trên Google Việt Nam.</p>
+            <p class="score-desc">Website cần xây dựng lại chiến lược SEO từ nền tảng để có thể hiện diện trên Google
+                Việt Nam.</p>
         </div>
 
         <!-- SEMRUSH METRICS -->
@@ -683,19 +800,55 @@
                 <h2 class="section-title">Technical SEO — 28/50</h2>
             </div>
 
-            <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-secondary);">Core Web Vitals (PageSpeed Insights)</h3>
+            <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-secondary);">Core Web Vitals (PageSpeed
+                Insights)</h3>
             <div class="table-wrapper" style="margin-bottom: 1.5rem;">
                 <table>
                     <thead>
-                        <tr><th>Chỉ số</th><th>Mobile</th><th>Desktop</th><th>Đánh giá</th></tr>
+                        <tr>
+                            <th>Chỉ số</th>
+                            <th>Mobile</th>
+                            <th>Desktop</th>
+                            <th>Đánh giá</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Performance Score</td><td>64/100</td><td>73/100</td><td><span class="score-badge badge-yellow">🟡 Cần cải thiện</span></td></tr>
-                        <tr><td>FCP</td><td>2.4s</td><td>0.9s</td><td><span class="score-badge badge-yellow">🟡/🟢</span></td></tr>
-                        <tr><td>LCP</td><td><strong style="color: var(--accent-red);">6.5s</strong></td><td>1.7s</td><td><span class="score-badge badge-red">🔴/🟡</span></td></tr>
-                        <tr><td>TBT</td><td>0ms</td><td>0ms</td><td><span class="score-badge badge-green">🟢/🟢</span></td></tr>
-                        <tr><td>CLS</td><td>0.152</td><td><strong style="color: var(--accent-red);">0.301</strong></td><td><span class="score-badge badge-yellow">🟡/🔴</span></td></tr>
-                        <tr><td>Speed Index</td><td>5.3s</td><td>2.1s</td><td><span class="score-badge badge-red">🔴/🟡</span></td></tr>
+                        <tr>
+                            <td>Performance Score</td>
+                            <td>64/100</td>
+                            <td>73/100</td>
+                            <td><span class="score-badge badge-yellow">🟡 Cần cải thiện</span></td>
+                        </tr>
+                        <tr>
+                            <td>FCP</td>
+                            <td>2.4s</td>
+                            <td>0.9s</td>
+                            <td><span class="score-badge badge-yellow">🟡/🟢</span></td>
+                        </tr>
+                        <tr>
+                            <td>LCP</td>
+                            <td><strong style="color: var(--accent-red);">6.5s</strong></td>
+                            <td>1.7s</td>
+                            <td><span class="score-badge badge-red">🔴/🟡</span></td>
+                        </tr>
+                        <tr>
+                            <td>TBT</td>
+                            <td>0ms</td>
+                            <td>0ms</td>
+                            <td><span class="score-badge badge-green">🟢/🟢</span></td>
+                        </tr>
+                        <tr>
+                            <td>CLS</td>
+                            <td>0.152</td>
+                            <td><strong style="color: var(--accent-red);">0.301</strong></td>
+                            <td><span class="score-badge badge-yellow">🟡/🔴</span></td>
+                        </tr>
+                        <tr>
+                            <td>Speed Index</td>
+                            <td>5.3s</td>
+                            <td>2.1s</td>
+                            <td><span class="score-badge badge-red">🔴/🟡</span></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -703,15 +856,50 @@
             <div class="table-wrapper">
                 <table>
                     <thead>
-                        <tr><th>Hạng mục</th><th>Điểm (/10)</th><th>Trạng thái</th><th>Ghi chú</th></tr>
+                        <tr>
+                            <th>Hạng mục</th>
+                            <th>Điểm (/10)</th>
+                            <th>Trạng thái</th>
+                            <th>Ghi chú</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Core Web Vitals</td><td>4</td><td><span class="score-badge badge-red">🔴</span></td><td>LCP Mobile 6.5s, CLS Desktop 0.301</td></tr>
-                        <tr><td>Mobile-Friendly</td><td>7</td><td><span class="score-badge badge-green">🟢</span></td><td>Responsive tốt</td></tr>
-                        <tr><td>Indexing</td><td>4</td><td><span class="score-badge badge-red">🔴</span></td><td>~19 trang index tại VN, thiếu hreflang</td></tr>
-                        <tr><td>Schema</td><td>4</td><td><span class="score-badge badge-yellow">🟡</span></td><td>Có Organization + Product, thiếu FAQ/Article/LocalBusiness</td></tr>
-                        <tr><td>HTTPS/Security</td><td>9</td><td><span class="score-badge badge-green">🟢</span></td><td>Hoạt động tốt</td></tr>
-                        <tr style="background: rgba(59,130,246,0.05);"><td><strong>Tổng Technical</strong></td><td><strong>28/50</strong></td><td><span class="score-badge badge-yellow">🟡</span></td><td>Cần cải thiện đáng kể</td></tr>
+                        <tr>
+                            <td>Core Web Vitals</td>
+                            <td>4</td>
+                            <td><span class="score-badge badge-red">🔴</span></td>
+                            <td>LCP Mobile 6.5s, CLS Desktop 0.301</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile-Friendly</td>
+                            <td>7</td>
+                            <td><span class="score-badge badge-green">🟢</span></td>
+                            <td>Responsive tốt</td>
+                        </tr>
+                        <tr>
+                            <td>Indexing</td>
+                            <td>4</td>
+                            <td><span class="score-badge badge-red">🔴</span></td>
+                            <td>~19 trang index tại VN, thiếu hreflang</td>
+                        </tr>
+                        <tr>
+                            <td>Schema</td>
+                            <td>4</td>
+                            <td><span class="score-badge badge-yellow">🟡</span></td>
+                            <td>Có Organization + Product, thiếu FAQ/Article/LocalBusiness</td>
+                        </tr>
+                        <tr>
+                            <td>HTTPS/Security</td>
+                            <td>9</td>
+                            <td><span class="score-badge badge-green">🟢</span></td>
+                            <td>Hoạt động tốt</td>
+                        </tr>
+                        <tr style="background: rgba(59,130,246,0.05);">
+                            <td><strong>Tổng Technical</strong></td>
+                            <td><strong>28/50</strong></td>
+                            <td><span class="score-badge badge-yellow">🟡</span></td>
+                            <td>Cần cải thiện đáng kể</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -838,17 +1026,83 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Kiến thức điện mặt trời (Pillar)</td><td>❌</td><td>✅ 20+ bài</td><td>✅ 15+ bài</td><td>✅ 10+ bài</td></tr>
-                        <tr><td>Hướng dẫn lắp đặt</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr>
-                        <tr><td>Chi phí & ROI</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr>
-                        <tr><td>Chính sách nhà nước</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr>
-                        <tr><td>So sánh sản phẩm/inverter</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr>
-                        <tr><td>Case study chi tiết</td><td>🟡 Sơ sài</td><td>✅ (video + ảnh)</td><td>✅</td><td>✅</td></tr>
-                        <tr><td>FAQ / Hỏi đáp</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr>
-                        <tr><td>Tin tức ngành</td><td>🟡 5 bài dịch máy</td><td>✅</td><td>✅</td><td>✅</td></tr>
-                        <tr><td>Bảo trì & vận hành O&M</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td></tr>
-                        <tr><td>ESS / Lưu trữ năng lượng</td><td>❌</td><td>✅</td><td>🟡</td><td>❌</td></tr>
-                        <tr><td>EV Charging</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+                        <tr>
+                            <td>Kiến thức điện mặt trời (Pillar)</td>
+                            <td>❌</td>
+                            <td>✅ 20+ bài</td>
+                            <td>✅ 15+ bài</td>
+                            <td>✅ 10+ bài</td>
+                        </tr>
+                        <tr>
+                            <td>Hướng dẫn lắp đặt</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Chi phí & ROI</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Chính sách nhà nước</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>So sánh sản phẩm/inverter</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Case study chi tiết</td>
+                            <td>🟡 Sơ sài</td>
+                            <td>✅ (video + ảnh)</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>FAQ / Hỏi đáp</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Tin tức ngành</td>
+                            <td>🟡 5 bài dịch máy</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Bảo trì & vận hành O&M</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>ESS / Lưu trữ năng lượng</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>🟡</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>EV Charging</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -868,7 +1122,8 @@
                     <div class="breakdown-item"><span>Social / Forum</span><span>~15%</span></div>
                     <div class="breakdown-item"><span>Blog / Guest Post</span><span>~10%</span></div>
                     <div class="breakdown-item"><span>Editorial / News</span><span>~5%</span></div>
-                    <div class="breakdown-item"><span>Spam / Low Quality</span><span style="color: var(--accent-red);">~10%</span></div>
+                    <div class="breakdown-item"><span>Spam / Low Quality</span><span
+                            style="color: var(--accent-red);">~10%</span></div>
                 </div>
                 <div class="breakdown-card">
                     <h3>Backlink Gap vs Đối thủ</h3>
@@ -896,32 +1151,47 @@
                         <span>Navigation & Structure</span>
                         <span>6/10</span>
                     </div>
-                    <div class="breakdown-bar"><div class="breakdown-bar-fill bar-yellow" style="width: 60%;"></div></div>
+                    <div class="breakdown-bar">
+                        <div class="breakdown-bar-fill bar-yellow" style="width: 60%;"></div>
+                    </div>
                     <div class="breakdown-item">
                         <span>CTA & Conversion</span>
                         <span>5/10</span>
                     </div>
-                    <div class="breakdown-bar"><div class="breakdown-bar-fill bar-red" style="width: 50%;"></div></div>
+                    <div class="breakdown-bar">
+                        <div class="breakdown-bar-fill bar-red" style="width: 50%;"></div>
+                    </div>
                     <div class="breakdown-item">
                         <span>Trust Signals</span>
                         <span>6/10</span>
                     </div>
-                    <div class="breakdown-bar"><div class="breakdown-bar-fill bar-yellow" style="width: 60%;"></div></div>
+                    <div class="breakdown-bar">
+                        <div class="breakdown-bar-fill bar-yellow" style="width: 60%;"></div>
+                    </div>
                     <div class="breakdown-item">
                         <span>Mobile UX</span>
                         <span>7/10</span>
                     </div>
-                    <div class="breakdown-bar"><div class="breakdown-bar-fill bar-green" style="width: 70%;"></div></div>
+                    <div class="breakdown-bar">
+                        <div class="breakdown-bar-fill bar-green" style="width: 70%;"></div>
+                    </div>
                 </div>
                 <div class="breakdown-card">
                     <h3>Vấn đề UX chính</h3>
                     <div style="font-size: 0.88rem; color: var(--text-secondary);">
-                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span style="color: var(--accent-red);">✗</span> Thiếu Zalo — kênh liên hệ phổ biến nhất VN</div>
-                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span style="color: var(--accent-red);">✗</span> Không có SĐT Việt Nam (chỉ có +86)</div>
-                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span style="color: var(--accent-red);">✗</span> Thiếu form báo giá tiếng Việt</div>
-                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span style="color: var(--accent-red);">✗</span> Menu "Dịch vụ" dẫn đến trang "News"</div>
-                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span style="color: var(--accent-red);">✗</span> Không có video factory tour/lắp đặt</div>
-                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span style="color: var(--accent-yellow);">⚠</span> Nội dung 100% dịch máy</div>
+                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span
+                                style="color: var(--accent-red);">✗</span> Thiếu Zalo — kênh liên hệ phổ biến nhất VN
+                        </div>
+                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span
+                                style="color: var(--accent-red);">✗</span> Không có SĐT Việt Nam (chỉ có +86)</div>
+                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span
+                                style="color: var(--accent-red);">✗</span> Thiếu form báo giá tiếng Việt</div>
+                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span
+                                style="color: var(--accent-red);">✗</span> Menu "Dịch vụ" dẫn đến trang "News"</div>
+                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span
+                                style="color: var(--accent-red);">✗</span> Không có video factory tour/lắp đặt</div>
+                        <div style="padding: 0.4rem 0; display: flex; gap: 0.5rem;"><span
+                                style="color: var(--accent-yellow);">⚠</span> Nội dung 100% dịch máy</div>
                     </div>
                 </div>
             </div>
@@ -980,10 +1250,14 @@
 
     <!-- FOOTER -->
     <footer class="footer">
+        <a href="https://goha.vn" target="_blank" rel="noopener">
+            <img src="https://static.goha.vn/wp-content/uploads/2025/06/Full.svg" alt="GOHA" class="footer-logo">
+        </a>
         <p><strong>GOHA SEO Team</strong> — Báo cáo tạo ngày 23/03/2026</p>
         <p>Dữ liệu Semrush: 22/03/2026 | PageSpeed Insights: 23/03/2026</p>
         <p style="margin-top: 0.5rem;">Báo cáo này có giá trị tham khảo trong 30 ngày kể từ ngày xuất.</p>
     </footer>
 
 </body>
+
 </html>
