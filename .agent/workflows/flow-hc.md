@@ -292,14 +292,14 @@ h1, h2, h3 { font-size: 12pt !important; }
 #### Nội dung chính
 - **Đoạn văn**: Ưu tiên độ sâu phân tích, không giới hạn số dòng cứng. Mỗi đoạn nên triển khai **đủ ý** trước khi xuống dòng mới.
 - **Câu**: Viết tự nhiên, không giới hạn số chữ cứng. Ưu tiên câu rõ ràng, mạch lạc, tránh câu thừa từ nhưng cũng không ngắt cách giả tạo.
-- **Giọng văn**: Chuyên môn nhưng dễ hiểu, xưng "bạn". Không quá suồng sã như nói chuyện, cũng không quá khô khan như sách giáo khoa.
+- **Giọng văn**: Dễ hiểu, gần gũi với người dùng phổ thông (không chuyên sâu tài chính). Xưng "bạn". Các thuật ngữ tài chính phải được giải thích bằng ngôn ngữ đời thường, tránh viết kiểu sách giáo khoa hoặc chuyên gia. Ví dụ: thay "tổng cầu" bằng "tổng nhu cầu mua sắm của toàn xã hội", thay "thu nhập khả dụng" bằng "số tiền còn lại sau thuế".
 - **Chiều sâu phân tích (phân loại H3)**:
     - **H3 chính** (liên quan trực tiếp KW chính/phụ): phân tích sâu, ví dụ cụ thể, giải thích cơ chế, đủ nội dung để đứng độc lập
     - **H3 phụ** (bổ trợ, không chứa KW): viết ngắn gọn 2-3 câu hoặc gom thành bullet list. Không kéo dài nội dung phụ, tập trung vào nội dung chính có trong keyword
     - Nội dung nào có **trình tự, bước, quy trình** → BẮT BUỘC viết dạng bullet list thay vì đoạn văn dài
 - **Câu chuyển liên kết**: Dùng **câu chuyển chuyển tiếp** giữa các đoạn: "Nhờ cơ chế cộng dồn này,...", "Vì vậy,...", "Trong thực tế,...", "Tuy nhiên,..."
 - **Nhận xét sau bảng/dữ liệu**: Sau mỗi bảng so sánh hoặc ví dụ tính toán, **BẮT BUỘC** có 1 đoạn nhận xét/phân tích kết quả (không để bảng lơ lửng).
-- **Bullet list**: Đầu bullet KHÔNG in đậm. Chỉ bold từ khóa chính/phụ khi xuất hiện tự nhiên trong bullet.
+- **Bullet list**: Đầu bullet KHÔNG in đậm. Chỉ bold từ khóa chính/phụ khi xuất hiện tự nhiên trong bullet. **Mỗi bullet tối đa 3 dòng**, gọn gàng, súc tích, đi thẳng vào giá trị chính. Không diễn giải dài dòng trong bullet.
 - **Bold rule**: Chỉ bold keyword chính + keyword phụ. KHÔNG bold sapo, label bullet, cú pháp, nút UI, hay text khác. Bold keyword trong heading H2/H3 được phép.
 - **Bảng so sánh**: Dùng khi cần phân biệt 2 khái niệm liên quan
 - **Ví dụ minh họa**: Luôn có ví dụ cụ thể (con số, tình huống) sau phần định nghĩa hoặc công thức
@@ -330,7 +330,7 @@ h1, h2, h3 { font-size: 12pt !important; }
 
 #### FAQs
 - 3 đến 5 câu hỏi, dạng H3 đầy đủ
-- Mỗi câu trả lời 2 đến 4 câu
+- Mỗi câu trả lời **1 đoạn ngắn gọn** (2 đến 3 câu), dễ hiểu, đi thẳng vào trọng tâm. KHÔNG viết dài, không lặp lại nội dung bài chính.
 - Dựa trên KW chính/phụ
 
 #### Kết bài
