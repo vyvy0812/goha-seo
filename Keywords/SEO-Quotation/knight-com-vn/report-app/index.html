@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh giá SEO — knight.com.vn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="https://static.goha.vn/wp-content/uploads/2025/06/Full.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">
+            <img src="https://static.goha.vn/wp-content/uploads/2025/06/Full.svg" alt="GOHA" height="28">
+        </a>
+        <div class="nav-links">
+            <a href="#overview" class="nav-link active">Tổng quan</a>
+            <a href="#scorecard" class="nav-link">Scorecard</a>
+            <a href="#technical" class="nav-link">Technical</a>
+            <a href="#keywords" class="nav-link">Keywords</a>
+            <a href="#competitors" class="nav-link">Đối thủ</a>
+            <a href="#content" class="nav-link">Content</a>
+            <a href="#backlinks" class="nav-link">Backlinks</a>
+            <a href="#ux" class="nav-link">UX</a>
+        </div>
+        <button class="nav-pdf-btn" onclick="exportPDF()" title="Xuất PDF">
+            <i class="fas fa-file-pdf"></i> Xuất PDF
+        </button>
+    </nav>
+
+    <!-- Floating PDF Button -->
+    <button class="fab-pdf" onclick="exportPDF()" title="Xuất báo cáo PDF">
+        <i class="fas fa-file-pdf"></i>
+        <span>Xuất PDF</span>
+    </button>
+
+    <!-- PDF Export Overlay -->
+    <div class="pdf-overlay" id="pdfOverlay">
+        <div class="pdf-modal">
+            <div class="pdf-spinner"></div>
+            <h3>Đang chuẩn bị PDF...</h3>
+            <p>Cửa sổ in sẽ mở sau vài giây. Chọn <strong>"Save as PDF"</strong> làm máy in.</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="overview">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-top">
+                <img src="https://static.goha.vn/wp-content/uploads/2025/06/Full.svg" alt="GOHA" class="hero-logo">
+                <div class="hero-badge">Báo cáo phân tích SEO & Báo giá dịch vụ</div>
+            </div>
+            <h1 class="hero-title">knight.com.vn</h1>
+            <p class="hero-desc">Knight Logistics — "YOU POINT, WE DELIVER." · 19+ năm kinh nghiệm · 4 chi
+                nhánh.<br>Đánh giá toàn diện nền tảng SEO với dữ liệu phân tích thực tế, ngày 16/03/2026.</p>
+
+            <div class="hero-metrics">
+                <div class="hm-card">
+                    <div class="hm-value" data-target="59">0</div>
+                    <div class="hm-label">SEO Score /100</div>
+                    <div class="hm-status yellow">Trung bình</div>
+                </div>
+                <div class="hm-card">
+                    <div class="hm-value" data-target="40">0</div>
+                    <div class="hm-label">PageSpeed Mobile</div>
+                    <div class="hm-status red">Cần cải thiện</div>
+                </div>
+                <div class="hm-card">
+                    <div class="hm-value" data-target="267">0</div>
+                    <div class="hm-label">URLs Indexed</div>
+                    <div class="hm-status green">Tốt</div>
+                </div>
+                <div class="hm-card">
+                    <div class="hm-value" data-target="35">0</div>
+                    <div class="hm-label">Keyword Cơ hội</div>
+                    <div class="hm-status green">Phát hiện mới</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN A — TỔNG QUAN DOANH NGHIỆP -->
+    <section class="section" id="company">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Phần A</span>
+                <h2 class="section-title">Tổng quan Doanh nghiệp</h2>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>A1. Thông tin Knight Logistics</h3>
+                    <table class="data-table compact">
+                        <tbody>
+                            <tr>
+                                <td class="label">Website</td>
+                                <td><a href="https://knight.com.vn/" target="_blank">knight.com.vn</a></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Tên công ty</td>
+                                <td>Knight Logistics Co., Ltd.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Tagline</td>
+                                <td>"YOU POINT, WE DELIVER."</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Năm thành lập</td>
+                                <td>2004 (đăng ký 2010) · <strong>19+ năm</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Ngành hàng</td>
+                                <td>Logistics / Freight Forwarding</td>
+                            </tr>
+                            <tr>
+                                <td class="label">CMS</td>
+                                <td>WordPress + Yoast SEO Premium</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Trụ sở</td>
+                                <td>81 Đường số 6, Cityland, Gò Vấp, TP.HCM</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Chi nhánh</td>
+                                <td>Hà Nội, Đà Nẵng, Hải Phòng (4 VP)</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Hotline</td>
+                                <td>1900 989802</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info-card">
+                    <h3>A2. Dịch vụ chính</h3>
+                    <div class="service-list">
+                        <div class="svc"><span class="svc-icon">🛩️</span><span class="svc-name">Air Freight</span><span
+                                class="svc-tag">Mainstream</span></div>
+                        <div class="svc"><span class="svc-icon">🚢</span><span class="svc-name">Ocean
+                                Freight</span><span class="svc-tag">Mainstream</span></div>
+                        <div class="svc"><span class="svc-icon">📋</span><span class="svc-name">Customs
+                                Clearance</span><span class="svc-tag">Mainstream</span></div>
+                        <div class="svc"><span class="svc-icon">💻</span><span class="svc-name">IOR Service</span><span
+                                class="svc-tag niche">⭐ Niche cao</span></div>
+                        <div class="svc"><span class="svc-icon">☢️</span><span class="svc-name">Dangerous Goods
+                                (DG)</span><span class="svc-tag niche">⭐ Niche cao</span></div>
+                        <div class="svc"><span class="svc-icon">🔋</span><span class="svc-name">Pin Lithium</span><span
+                                class="svc-tag niche-s">⭐ Siêu niche</span></div>
+                        <div class="svc"><span class="svc-icon">🐾</span><span class="svc-name">AVI (Live
+                                Animals)</span><span class="svc-tag niche-s">⭐ Siêu niche</span></div>
+                        <div class="svc"><span class="svc-icon">🚚</span><span class="svc-name">Inland
+                                Transport</span><span class="svc-tag">Mainstream</span></div>
+                    </div>
+                    <h3 style="margin-top:24px">A3. Chứng nhận</h3>
+                    <div class="cert-row">
+                        <span class="cert">✈️ IATA</span>
+                        <span class="cert">🏛️ VCCI</span>
+                        <span class="cert">📦 VLA</span>
+                        <span class="cert">🌐 WCA</span>
+                        <span class="cert">🛡️ Chubb Insurance</span>
+                    </div>
+                    <p class="trust-note">8,700+ đối tác · 14,000+ khách hàng hài lòng</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN B — SEO SCORECARD -->
+    <section class="section section-alt" id="scorecard">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Phần B</span>
+                <h2 class="section-title">SEO Scorecard</h2>
+            </div>
+
+            <!-- Score Hero -->
+            <div class="score-card-hero">
+                <div class="gauge-wrap">
+                    <svg class="gauge" viewBox="0 0 200 200">
+                        <circle class="gauge-bg" cx="100" cy="100" r="85" />
+                        <circle class="gauge-fill" cx="100" cy="100" r="85" data-score="59" />
+                    </svg>
+                    <div class="gauge-center">
+                        <span class="gauge-num" data-target="59">0</span>
+                        <span class="gauge-of">/100</span>
+                    </div>
+                </div>
+                <div class="score-info">
+                    <div class="score-grade">🟡 TRUNG BÌNH</div>
+                    <p>Website cần đầu tư nghiêm túc vào SEO để cạnh tranh. Cơ hội cải thiện rõ ràng qua tối ưu tốc độ,
+                        content chuyên sâu và link building.</p>
+                </div>
+            </div>
+
+            <!-- Score Breakdown -->
+            <div class="score-grid">
+                <div class="s-item" data-percent="70" data-color="yellow">
+                    <div class="s-top"><span>Technical SEO</span><span>35/50</span></div>
+                    <div class="s-bar">
+                        <div class="s-fill"></div>
+                    </div><span class="s-weight">Trọng số: 25%</span>
+                </div>
+                <div class="s-item" data-percent="60" data-color="yellow">
+                    <div class="s-top"><span>Keyword & Rankings</span><span>12/20</span></div>
+                    <div class="s-bar">
+                        <div class="s-fill"></div>
+                    </div><span class="s-weight">Trọng số: 20%</span>
+                </div>
+                <div class="s-item" data-percent="50" data-color="red">
+                    <div class="s-top"><span>Content Quality</span><span>10/20</span></div>
+                    <div class="s-bar">
+                        <div class="s-fill"></div>
+                    </div><span class="s-weight">Trọng số: 20%</span>
+                </div>
+                <div class="s-item" data-percent="40" data-color="red">
+                    <div class="s-top"><span>Backlink Profile</span><span>6/15</span></div>
+                    <div class="s-bar">
+                        <div class="s-fill"></div>
+                    </div><span class="s-weight">Trọng số: 15%</span>
+                </div>
+                <div class="s-item" data-percent="50" data-color="yellow">
+                    <div class="s-top"><span>Competitor Position</span><span>5/10</span></div>
+                    <div class="s-bar">
+                        <div class="s-fill"></div>
+                    </div><span class="s-weight">Trọng số: 10%</span>
+                </div>
+                <div class="s-item" data-percent="85" data-color="green">
+                    <div class="s-top"><span>UX & Conversion</span><span>17/20</span></div>
+                    <div class="s-bar">
+                        <div class="s-fill"></div>
+                    </div><span class="s-weight">Trọng số: 10%</span>
+                </div>
+            </div>
+
+            <!-- Competitor Comparison Bar -->
+            <div class="compare-bars">
+                <h3>So sánh nhanh với đối thủ</h3>
+                <div class="cb"><span class="cb-name active">Knight Logistics</span>
+                    <div class="cb-track">
+                        <div class="cb-fill" style="--w:59%" data-color="yellow"></div>
+                    </div><span class="cb-val">59</span>
+                </div>
+                <div class="cb"><span class="cb-name">Vinalink Logistics</span>
+                    <div class="cb-track">
+                        <div class="cb-fill" style="--w:68%" data-color="green"></div>
+                    </div><span class="cb-val">68</span>
+                </div>
+                <div class="cb"><span class="cb-name">ITL Corporation</span>
+                    <div class="cb-track">
+                        <div class="cb-fill" style="--w:73%" data-color="green"></div>
+                    </div><span class="cb-val">73</span>
+                </div>
+                <div class="cb"><span class="cb-name">Bee Logistics</span>
+                    <div class="cb-track">
+                        <div class="cb-fill" style="--w:75%" data-color="green"></div>
+                    </div><span class="cb-val">75</span>
+                </div>
+            </div>
+
+            <!-- Strengths & Weaknesses -->
+            <div class="two-col">
+                <div class="sw-card strengths">
+                    <h3>✅ Top 5 Điểm Mạnh</h3>
+                    <ul>
+                        <li><strong>UX/Design xuất sắc (17/20)</strong> — Giao diện hiện đại, CTA rõ ràng, floating chat
+                        </li>
+                        <li><strong>Indexing hoàn hảo (9/10)</strong> — 267+ URLs, sitemap/canonical/hreflang chuẩn</li>
+                        <li><strong>Dịch vụ niche độc đáo</strong> — DG, AVI, IOR, Pin Lithium — ít đối thủ khai thác
+                        </li>
+                        <li><strong>Đa ngôn ngữ VI/EN</strong> — Mở rộng thị trường quốc tế</li>
+                        <li><strong>Trust signals mạnh</strong> — IATA, VCCI, VLA, WCA + 14,000+ KH</li>
+                    </ul>
+                </div>
+                <div class="sw-card weaknesses">
+                    <h3>⚠️ Top 5 Vấn Đề Cấp Bách</h3>
+                    <ul>
+                        <li><strong>Tốc độ RẤT CHẬM</strong> — LCP 10.1s mobile, PageSpeed 40/100</li>
+                        <li><strong>Không có Pillar Content</strong> — 0 bài hướng dẫn chuyên sâu</li>
+                        <li><strong>Backlink yếu</strong> — DA ~20-25, thiếu PR/editorial links</li>
+                        <li><strong>Content thin</strong> — Bài viết 400-800 từ, không đủ depth</li>
+                        <li><strong>Schema thiếu</strong> — Chưa có Service, LocalBusiness, Article, FAQ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN C — TECHNICAL SEO -->
+    <section class="section" id="technical">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Phần C</span>
+                <h2 class="section-title">Technical SEO Audit <span class="score-badge yellow">35/50</span></h2>
+            </div>
+
+            <h3 class="sub-title">C1. Core Web Vitals & Tốc độ — <span class="c-red">3/10</span></h3>
+            <div class="two-col">
+                <div class="ps-card">
+                    <div class="ps-head"><i class="fas fa-mobile-alt"></i> Mobile — <span class="c-red">40/100</span>
+                    </div>
+                    <table class="data-table ps-table">
+                        <thead>
+                            <tr>
+                                <th>Chỉ số</th>
+                                <th>Giá trị</th>
+                                <th>Ngưỡng tốt</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-red">
+                                <td>LCP</td>
+                                <td><strong>10.1s</strong></td>
+                                <td>≤2.5s</td>
+                                <td>🔴</td>
+                            </tr>
+                            <tr class="row-red">
+                                <td>INP</td>
+                                <td><strong>572ms</strong></td>
+                                <td>≤200ms</td>
+                                <td>🔴</td>
+                            </tr>
+                            <tr class="row-green">
+                                <td>CLS</td>
+                                <td><strong>0.063</strong></td>
+                                <td>≤0.1</td>
+                                <td>🟢</td>
+                            </tr>
+                            <tr class="row-red">
+                                <td>FCP</td>
+                                <td><strong>6.3s</strong></td>
+                                <td>≤1.8s</td>
+                                <td>🔴</td>
+                            </tr>
+                            <tr class="row-red">
+                                <td>TTFB</td>
+                                <td><strong>2.4s</strong></td>
+                                <td>≤0.8s</td>
+                                <td>🔴</td>
+                            </tr>
+                            <tr class="row-red">
+                                <td>Speed Index</td>
+                                <td><strong>13.1s</strong></td>
+                                <td>≤3.4s</td>
+                                <td>🔴</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ps-card">
+                    <div class="ps-head"><i class="fas fa-desktop"></i> Desktop — <span class="c-red">47/100</span>
+                    </div>
+                    <table class="data-table ps-table">
+                        <thead>
+                            <tr>
+                                <th>Chỉ số</th>
+                                <th>Giá trị</th>
+                                <th>Ngưỡng tốt</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-red">
+                                <td>LCP</td>
+                                <td><strong>3.6s</strong></td>
+                                <td>≤2.5s</td>
+                                <td>🔴</td>
+                            </tr>
+                            <tr class="row-green">
+                                <td>INP</td>
+                                <td><strong>72ms</strong></td>
+                                <td>≤200ms</td>
+                                <td>🟢</td>
+                            </tr>
+                            <tr class="row-green">
+                                <td>CLS</td>
+                                <td><strong>0.083</strong></td>
+                                <td>≤0.1</td>
+                                <td>🟢</td>
+                            </tr>
+                            <tr>
+                                <td>FCP</td>
+                                <td><strong>1.0s</strong></td>
+                                <td>≤1.8s</td>
+                                <td>🟡</td>
+                            </tr>
+                            <tr class="row-red">
+                                <td>Speed Index</td>
+                                <td><strong>5.0s</strong></td>
+                                <td>≤3.4s</td>
+                                <td>🔴</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="callout warning">
+                <strong>⚠️ Nhận xét:</strong> Website rất chậm trên cả hai nền tảng. TTFB 2.4s cho thấy server response
+                time kém — hosting yếu hoặc thiếu CDN. LCP 10.1s trên mobile mức nghiêm trọng, ảnh hưởng trực tiếp thứ
+                hạng Google.
+            </div>
+
+            <!-- Fix Speed -->
+            <details class="accordion">
+                <summary>🔧 Đề xuất khắc phục tốc độ</summary>
+                <div class="accordion-body">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Hành động</th>
+                                <th>Ưu tiên</th>
+                                <th>Dự kiến cải thiện</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Triển khai CDN (Cloudflare/BunnyCDN)</td>
+                                <td>⭐⭐⭐</td>
+                                <td>TTFB giảm 50-70%</td>
+                            </tr>
+                            <tr>
+                                <td>Nén & tối ưu hình ảnh (WebP, lazy load)</td>
+                                <td>⭐⭐⭐</td>
+                                <td>LCP giảm 30-50%</td>
+                            </tr>
+                            <tr>
+                                <td>Minify CSS/JS + Defer non-critical JS</td>
+                                <td>⭐⭐⭐</td>
+                                <td>FCP giảm 20-30%</td>
+                            </tr>
+                            <tr>
+                                <td>Server-side caching (WP Rocket)</td>
+                                <td>⭐⭐</td>
+                                <td>Tổng thể +15-25 điểm</td>
+                            </tr>
+                            <tr>
+                                <td>Giảm plugin WordPress không cần thiết</td>
+                                <td>⭐⭐</td>
+                                <td>INP/TBT cải thiện</td>
+                            </tr>
+                            <tr>
+                                <td>Preload critical resources</td>
+                                <td>⭐</td>
+                                <td>LCP giảm 10-15%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+
+            <!-- Tech Summary Grid -->
+            <h3 class="sub-title">C7. Tổng hợp Technical SEO</h3>
+            <div class="audit-chips">
+                <div class="chip green"><span class="chip-score">8/10</span><span
+                        class="chip-label">Mobile-Friendly</span><span class="chip-note">Responsive tốt</span></div>
+                <div class="chip green"><span class="chip-score">9/10</span><span
+                        class="chip-label">Indexing</span><span class="chip-note">267+ URLs, hreflang ✅</span></div>
+                <div class="chip yellow"><span class="chip-score">5/10</span><span class="chip-label">Schema</span><span
+                        class="chip-note">Thiếu Service, Local, FAQ</span></div>
+                <div class="chip green"><span class="chip-score">10/10</span><span
+                        class="chip-label">HTTPS/Security</span><span class="chip-note">SSL + redirect ✅</span></div>
+                <div class="chip red"><span class="chip-score">3/10</span><span class="chip-label">Core Web
+                        Vitals</span><span class="chip-note">LCP 10.1s 🔴</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN D — KEYWORDS -->
+    <section class="section section-alt" id="keywords">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Phần D</span>
+                <h2 class="section-title">Keyword & Rankings <span class="score-badge yellow">12/20</span></h2>
+            </div>
+            <p class="section-desc">Đang target ~25-30 keyword. Phát hiện <strong>35+ keyword cơ hội mới</strong> chưa
+                khai thác.</p>
+
+            <div class="tabs">
+                <button class="tab active" data-tab="info">📘 Informational (15)</button>
+                <button class="tab" data-tab="comm">🛒 Commercial (10)</button>
+                <button class="tab" data-tab="trans">💰 Transactional (10)</button>
+            </div>
+
+            <div class="tab-content active" id="info">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Keyword</th>
+                            <th>SV/tháng</th>
+                            <th>Relevance</th>
+                            <th>Difficulty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>freight forwarder là gì</td>
+                            <td>500-1000</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>incoterms 2020 là gì</td>
+                            <td>2000+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>FCL LCL là gì</td>
+                            <td>1000+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>thủ tục hải quan xuất nhập khẩu</td>
+                            <td>1000+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>quy trình xuất khẩu hàng hóa</td>
+                            <td>800+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>cách tính cước vận tải biển</td>
+                            <td>500+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>HS code là gì cách tra mã HS</td>
+                            <td>1000+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>quy định vận chuyển hàng nguy hiểm 2026</td>
+                            <td>300+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>vận đơn bill of lading là gì</td>
+                            <td>500+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>bảo hiểm hàng hóa xuất nhập khẩu</td>
+                            <td>300+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-content" id="comm">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Keyword</th>
+                            <th>SV/tháng</th>
+                            <th>Relevance</th>
+                            <th>Difficulty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>công ty logistics uy tín TPHCM</td>
+                            <td>500+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge red">Cao</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>dịch vụ freight forwarder vietnam</td>
+                            <td>300+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>báo giá vận chuyển đường biển</td>
+                            <td>500+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>công ty thủ tục hải quan</td>
+                            <td>300+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>vận chuyển hàng từ TQ về VN</td>
+                            <td>1000+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge red">Cao</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>dịch vụ IOR vietnam</td>
+                            <td>100+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge blue">Rất thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>so sánh công ty logistics VN</td>
+                            <td>200+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>forwarder uy tín hải phòng</td>
+                            <td>200+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-content" id="trans">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Keyword</th>
+                            <th>SV/tháng</th>
+                            <th>Relevance</th>
+                            <th>Difficulty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>báo giá vận chuyển hàng không QT</td>
+                            <td>300+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>giá cước vận chuyển đường biển 2026</td>
+                            <td>500+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>dịch vụ vận chuyển hàng đi Mỹ</td>
+                            <td>500+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge red">Cao</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>dịch vụ vận chuyển hàng đi châu Âu</td>
+                            <td>300+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge yellow">TB</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>dịch vụ door to door quốc tế</td>
+                            <td>200+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>vận chuyển air cargo vietnam</td>
+                            <td>200+</td>
+                            <td><span class="badge purple">Rất cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>đại lý hải quan tại hải phòng</td>
+                            <td>200+</td>
+                            <td><span class="badge green">Cao</span></td>
+                            <td><span class="badge blue">Thấp</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN E — COMPETITORS -->
+    <section class="section" id="competitors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Phần E</span>
+                <h2 class="section-title">Competitor Benchmark <span class="score-badge yellow">5/10</span></h2>
+            </div>
+
+            <table class="data-table compare-table">
+                <thead>
+                    <tr>
+                        <th>Tiêu chí</th>
+                        <th class="col-current">🏢 Knight</th>
+                        <th>🐝 Bee</th>
+                        <th>🔗 Vinalink</th>
+                        <th>🌐 ITL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nhân sự</td>
+                        <td class="col-current">~100+</td>
+                        <td>~900</td>
+                        <td>~350</td>
+                        <td>~2000+</td>
+                    </tr>
+                    <tr>
+                        <td>Chi nhánh</td>
+                        <td class="col-current">4</td>
+                        <td>35</td>
+                        <td>6+</td>
+                        <td>20+</td>
+                    </tr>
+                    <tr>
+                        <td>Trang index</td>
+                        <td class="col-current">~267</td>
+                        <td>~500+</td>
+                        <td>~200+</td>
+                        <td>~400+</td>
+                    </tr>
+                    <tr>
+                        <td>Pillar Content</td>
+                        <td class="col-current c-red">0</td>
+                        <td>5-10</td>
+                        <td>3-5</td>
+                        <td>5-10</td>
+                    </tr>
+                    <tr>
+                        <td>Domain Authority</td>
+                        <td class="col-current c-red">20-25</td>
+                        <td>35-40</td>
+                        <td>30-35</td>
+                        <td>40-50</td>
+                    </tr>
+                    <tr>
+                        <td>Referring Domains</td>
+                        <td class="col-current c-red">~100-200</td>
+                        <td>~500-800</td>
+                        <td>~300-500</td>
+                        <td>~800+</td>
+                    </tr>
+                    <tr>
+                        <td>PageSpeed Mobile</td>
+                        <td class="col-current c-red">40</td>
+                        <td>~55-65</td>
+                        <td>~50-60</td>
+                        <td>~45-55</td>
+                    </tr>
+                    <tr class="row-total">
+                        <td><strong>TỔNG (/40)</strong></td>
+                        <td class="col-current"><strong>20</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>25</strong></td>
+                        <td><strong>29</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="callout info">
+                <strong>Kết luận:</strong> Knight đứng cuối bảng. Gap lớn nhất: <strong>Content Quality</strong> (thiếu
+                Pillar) & <strong>Backlink Profile</strong> (thiếu PR). Tuy nhiên, Knight có lợi thế niche (DG, AVI,
+                IOR, Pin Lithium) mà đối thủ chưa khai thác sâu.
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN F — CONTENT -->
+    <section class="section section-alt" id="content">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Phần F</span>
+                <h2 class="section-title">Content Audit & Gap <span class="score-badge red">10/20</span></h2>
+            </div>
+
+            <div class="stat-row">
+                <div class="stat">
+                    <div class="stat-num">10</div>
+                    <div class="stat-label">Static Pages</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">20+</div>
+                    <div class="stat-label">Service Pages</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">169</div>
+                    <div class="stat-label">Blog/News</div>
+                </div>
+                <div class="stat alert">
+                    <div class="stat-num">0</div>
+                    <div class="stat-label">Pillar Content</div>
+                </div>
+            </div>
+
+            <h3 class="sub-title">Content Gap vs Đối thủ</h3>
+            <table class="data-table gap-table">
+                <thead>
+                    <tr>
+                        <th>Topic Cluster</th>
+                        <th>Knight</th>
+                        <th>Bee</th>
+                        <th>Vinalink</th>
+                        <th>ITL</th>
+                        <th>Ưu tiên</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hướng dẫn XNK (Pillar)</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Incoterms Guide</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>FCL vs LCL Guide</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Quy trình thông quan</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Bảng giá cước 2026</td>
+                        <td class="c-yellow">🟡</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-yellow">🟡</td>
+                        <td class="c-green">✅</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Case Studies</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td>⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>HS Code tra cứu</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-yellow">🟡</td>
+                        <td class="c-green">✅</td>
+                        <td>⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>FAQ Page (schema)</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td>⭐⭐</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- PHẦN G — BACKLINKS -->
+    <section class="section" id="backlinks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Phần G</span>
+                <h2 class="section-title">Backlink Profile <span class="score-badge red">6/15</span></h2>
+            </div>
+
+            <div class="stat-row">
+                <div class="stat">
+                    <div class="stat-num">20-25</div>
+                    <div class="stat-label">Domain Authority</div>
+                    <div class="stat-status red">Thấp</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">500-800</div>
+                    <div class="stat-label">Total Backlinks</div>
+                    <div class="stat-status yellow">TB</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">100-200</div>
+                    <div class="stat-label">Referring Domains</div>
+                    <div class="stat-status red">Ít</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">60/40</div>
+                    <div class="stat-label">Follow/Nofollow</div>
+                    <div class="stat-status yellow">OK</div>
+                </div>
+            </div>
+
+            <h3 class="sub-title">Backlink Gap vs Đối thủ</h3>
+            <table class="data-table gap-table">
+                <thead>
+                    <tr>
+                        <th>Nguồn</th>
+                        <th>Knight</th>
+                        <th>Bee</th>
+                        <th>Vinalink</th>
+                        <th>ITL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PR / News Release</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Industry Publications</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Guest Posting</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-yellow">🟡</td>
+                        <td class="c-green">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Government Sites</td>
+                        <td class="c-red">❌</td>
+                        <td class="c-yellow">🟡</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                    </tr>
+                    <tr>
+                        <td>International Directories</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                        <td class="c-green">✅</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="callout warning">
+                <strong>Nhận xét:</strong> Profile sạch nhưng yếu. Thiếu hoàn toàn PR, Guest Post, Editorial backlinks —
+                đây là gap lớn nhất so với cả 3 đối thủ.
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN H — UX -->
+    <section class="section section-alt" id="ux">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Phần H</span>
+                <h2 class="section-title">UX & Conversion Signals <span class="score-badge green">17/20</span></h2>
+            </div>
+
+            <div class="ux-grid">
+                <div class="ux-card">
+                    <div class="ux-score-v green">5/5</div>
+                    <h4>Navigation & Structure</h4>
+                    <p>Menu clear, breadcrumb, search, clean URLs</p>
+                </div>
+                <div class="ux-card">
+                    <div class="ux-score-v green">4/5</div>
+                    <h4>CTA & Conversion</h4>
+                    <p>Quotation form, hotline, Zalo/WhatsApp, Track&Trace</p>
+                </div>
+                <div class="ux-card">
+                    <div class="ux-score-v green">4/5</div>
+                    <h4>Trust Signals</h4>
+                    <p>IATA/VCCI/WCA badges. Thiếu testimonials & case studies</p>
+                </div>
+                <div class="ux-card">
+                    <div class="ux-score-v green">4/5</div>
+                    <h4>Mobile Experience</h4>
+                    <p>Responsive tốt, no popups. Speed là vấn đề duy nhất</p>
+                </div>
+            </div>
+
+            <h3 class="sub-title">Yêu cầu cho khách hàng</h3>
+            <div class="req-list">
+                <div class="req">Cung cấp access CMS WordPress (editor/admin)</div>
+                <div class="req">Phối hợp cung cấp thông tin chuyên ngành cho content</div>
+                <div class="req">Review & approve content trước khi publish</div>
+                <div class="req">Cung cấp Google Analytics & Search Console access</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <img src="https://static.goha.vn/wp-content/uploads/2025/06/Full.svg" alt="GOHA" height="40"
+                    style="margin-bottom:16px">
+                <h2>GOHA có thể giúp Knight Logistics triển khai từ technical fixes đến content strategy</h2>
+                <p>Tối ưu chuyển đổi B2B và organic traffic từ tháng đầu tiên.</p>
+                <a href="mailto:hello@goha.vn" class="cta-btn"><i class="fas fa-envelope"></i> Liên hệ hello@goha.vn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <img src="https://static.goha.vn/wp-content/uploads/2025/06/Full.svg" alt="GOHA" height="24">
+                <span>Báo cáo tạo ngày 16/03/2026 — Phiên bản 3.0</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
