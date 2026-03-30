@@ -112,6 +112,7 @@ Chèn **ở cuối bài, trước phần CHỮ KÝ**:
 ### Cách đi link
 - Đi link theo đúng **intent người dùng**: khi user lướt đến đoạn thông tin cần biết thêm → dẫn link về bài liên quan (đúng context).
 - Đi link theo dạng **anchor text** trong một ngữ cảnh liên quan, KHÔNG đi theo cụm 1–2–3–4 link.
+- **Xử lý Anchor Text tự nhiên**: Bắt buộc phải lược bỏ các cụm từ hỏi như "là gì", "như thế nào" khi chèn link để câu văn trong bài luôn mượt mà. (Ví dụ: thay vì viết bắt buộc *hiểu rõ [phí thường niên là gì](link)*, hãy viết tự nhiên thành *gánh nặng [phí thường niên](link)*).
 - **Ví dụ**: Bài viết đang ở đoạn "Điều kiện mở thẻ tín dụng online" → có yêu cầu KH cần có điểm tín dụng tốt → hyperlink về bài "điểm tín dụng".
 
 ---

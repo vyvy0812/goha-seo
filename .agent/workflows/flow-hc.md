@@ -323,6 +323,11 @@ h1, h2, h3 { font-size: 12pt !important; }
 - **KHÔNG** dùng dạng `>>> Xem thêm: [Title](link)`. Chỉ đi link qua **anchor text** tự nhiên trong câu văn.
 - Mỗi URL chỉ xuất hiện **1 lần duy nhất** trong toàn bài
 - Chọn 10 đến 15 link từ database có chủ đề liên quan nhất đến nội dung bài
+- **Xử lý Anchor Text tự nhiên**: Khi chèn link từ database có chứa các cụm từ hỏi như "là gì", "như thế nào" (VD: `[phí thường niên là gì](link)`), bắt buộc phải **lược bỏ các cụm từ hỏi này hoặc chỉnh sửa anchor text** để câu văn tự nhiên nhất.
+    - SAI: Giúp bạn hiểu rõ định nghĩa [phí thường niên là gì](link)
+    - ĐÚNG: Giúp bạn hoàn toàn loại bỏ gánh nặng [phí thường niên](link)
+    - SAI: Khái niệm [thẻ tín dụng quốc tế là gì](link) rất phổ biến.
+    - ĐÚNG: Sở hữu [thẻ tín dụng quốc tế](link) mang lại nhiều lợi ích.
 - **Anchor text PHẢI khớp nội dung bài đích** (QUAN TRỌNG): Khi chọn link từ database, anchor text trong câu văn PHẢI mô tả đúng nội dung mà bài viết đích thực sự nói đến. KHÔNG được dùng anchor text một đằng nhưng link đến bài viết có nội dung khác. Ví dụ:
     - SAI: anchor "tăng trưởng tín dụng" → link đến bài "Dư nợ tín dụng là gì?" (bài nói về dư nợ, không phải tăng trưởng)
     - SAI: anchor "lợi nhuận và chi phí vận hành" → link đến bài "Báo cáo tài chính là gì?" (bài nói về BCTC, không phải lợi nhuận)
