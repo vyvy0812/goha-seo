@@ -301,12 +301,11 @@ h1, h2, h3 { font-size: 12pt !important; }
     - **H3 chính** (liên quan trực tiếp KW chính/phụ): phân tích sâu, ví dụ cụ thể, giải thích cơ chế, đủ nội dung để đứng độc lập
     - **H3 phụ** (bổ trợ, không chứa KW): viết ngắn gọn 2-3 câu hoặc gom thành bullet list. Không kéo dài nội dung phụ, tập trung vào nội dung chính có trong keyword
     - Nội dung nào có **trình tự, bước, quy trình** → BẮT BUỘC viết dạng bullet list thay vì đoạn văn dài
-- **Câu chuyển liên kết**: Dùng **câu chuyển chuyển tiếp** giữa các đoạn: "Nhờ cơ chế cộng dồn này,...", "Vì vậy,...", "Trong thực tế,...", "Tuy nhiên,..."
-- **Nhận xét sau bảng/dữ liệu**: Sau mỗi bảng so sánh hoặc ví dụ tính toán, **BẮT BUỘC** có 1 đoạn nhận xét/phân tích kết quả (không để bảng lơ lửng).
-- **Bullet list**: Đầu bullet KHÔNG in đậm. Chỉ bold từ khóa chính/phụ khi xuất hiện tự nhiên trong bullet. **Mỗi bullet tối đa 3 dòng**, gọn gàng, súc tích, đi thẳng vào giá trị chính. Không diễn giải dài dòng trong bullet.
-- **Bold rule**: Chỉ bold keyword chính + keyword phụ. KHÔNG bold sapo, label bullet, cú pháp, nút UI, hay text khác. Bold keyword trong heading H2/H3 được phép.
-- **Bảng so sánh**: Dùng khi cần phân biệt 2 khái niệm liên quan
-- **Ví dụ minh họa**: Luôn có ví dụ cụ thể (con số, tình huống) sau phần định nghĩa hoặc công thức
+- **Định dạng Bảng (Table)**: 
+    - **Bảng so sánh**: Dùng khi cần phân biệt 2 khái niệm liên quan.
+    - **Nếu heading có từ "Bảng"** (VD: "Bảng giá", "Bảng lãi suất"): **BẮT BUỘC** trình bày dữ liệu dạng bảng Markdown Table (không dùng list).
+- **Nhận xét sau bảng**: Sau mỗi bảng số liệu hoặc bảng so sánh, **BẮT BUỘC** có 1 đoạn văn (nhận xét/phân tích) rút ra kết luận từ bảng đó. Không để bảng lơ lửng rồi qua mục khác.
+- **Ví dụ minh họa**: Luôn có ví dụ cụ thể (con số, tình huống) sau phần định nghĩa hoặc công thức.
 
 #### Keyword Density
 - Mật độ từ khóa: **1% đến 1.5%** (tổng số từ khóa / tổng số từ)
