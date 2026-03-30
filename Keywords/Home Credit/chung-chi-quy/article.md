@@ -176,7 +176,7 @@ Nên đầu tư chứng chỉ quỹ thuộc hình thức lâu năm và dài hạ
 
 ## Kết bài
 
-Mong rằng bài viết này đã giải mã các đặc điểm cũng như phân loại **chứng chỉ quỹ là gì** cũng như chia sẻ nhiều lý thuyết bổ ích giúp bạn nắm vững được những cách mua chứng chỉ quỹ, so lợi thế và rủi ro ở tương lai. Chúc bạn có phương án xây dựng nên nhiều quỹ nhằm vững tâm hơn cho mọi kế hoạch. Mọi thông tin thắc mắc nào khác các bạn hãy truy cập và ghé thăm trang [cẩm nang tài chính số](https://www.homecredit.vn/blog) của Home Credit để không phải lỡ mất một nội dung tốt nào nhé!
+Mong rằng bài viết này đã giải mã các đặc điểm cũng như phân loại **chứng chỉ quỹ là gì** cũng như chia sẻ nhiều lý thuyết bổ ích giúp bạn nắm vững được những cách mua chứng chỉ quỹ, so lợi thế và rủi ro ở tương lai. Chúc bạn có phương án xây dựng nên nhiều quỹ nhằm vững tâm hơn cho mọi kế hoạch. Mọi thông tin thắc mắc nào khác các bạn hãy truy cập và ghé thăm trang [Cẩm nang tài chính số](https://www.homecredit.vn/blog) của Home Credit để không phải lỡ mất một nội dung tốt nào nhé!
 
 > *Lưu ý: Thông tin trong bài mang tính chất tham khảo, được tổng hợp từ thị trường và không đại diện cho toàn bộ sản phẩm, dịch vụ của Home Credit.*
 

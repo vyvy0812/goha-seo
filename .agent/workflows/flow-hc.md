@@ -348,7 +348,7 @@ h1, h2, h3 { font-size: 12pt !important; }
 #### Kết bài
 - 2 đến 3 câu tóm tắt
 - Chứa KW chính
-- CTA dẫn về blog: "ghé thăm blog [cẩm nang tài chính số](https://www.homecredit.vn/blog) của Home Credit" (anchor text PHẢI là "cẩm nang tài chính số", KHÔNG rút gọn hay dùng cụm từ khác)
+- CTA dẫn về blog: "ghé thăm blog [Cẩm nang tài chính số](https://www.homecredit.vn/blog) của Home Credit" (anchor text PHẢI là "Cẩm nang tài chính số", KHÔNG rút gọn hay dùng cụm từ khác)
 
 #### Disclaimer (bắt buộc, trước chữ ký)
 > *Lưu ý: Thông tin trong bài mang tính chất tham khảo, được tổng hợp từ thị trường và không đại diện cho toàn bộ sản phẩm, dịch vụ của Home Credit.*
