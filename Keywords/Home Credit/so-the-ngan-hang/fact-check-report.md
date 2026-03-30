@@ -1,17 +1,24 @@
 # Fact-Check Report: Số thẻ ngân hàng
 
 ## 1. Verified Claims
-- Số thẻ ngân hàng gồm 16 hoặc 19 chữ số → Source: Techcombank, VPBank, HDBank, VIB, MSB
-- Mã BIN 9704 cho thẻ nội địa Việt Nam → Source: napas.com.vn, tinhte.vn, vpbank.com.vn
-- Thẻ Visa bắt đầu bằng số 4, Mastercard bắt đầu bằng số 5 → Source: mastercard.com, worldline.com, rabbitcare.vn
-- Mã BIN gồm 6 chữ số đầu (chuẩn quốc tế, đang mở rộng lên 8) → Source: fraudlabspro.com, worldline.com
-- Số tài khoản ngân hàng gồm 8 đến 15 chữ số → Source: HDBank, VIB, Techcombank
-- Lộ số thẻ + CVV + ngày hết hạn = rủi ro cao (thẻ quốc tế) → Source: cake.vn, acb.com.vn, vpbank.com.vn
-- Thẻ tín dụng Home Credit: hợp tác Visa, đăng ký online, trả góp 0% → Source: homecredit.vn (verified 23/03/2026)
-- Từ 01/07/2025 ngừng giao dịch thẻ từ → Source: vnba.org.vn
 
-## 2. Corrections Made (đã sửa trong article.md)
-- Không có claim nào sai cần sửa. Tất cả claims đã verified chính xác.
+- Số thẻ ngân hàng gồm 16 hoặc 19 chữ số → Confirmed: VPBank, Techcombank, VIB, HDBank, MSB, Cake
+- Mã BIN là 6 chữ số đầu tiên do tổ chức thẻ quốc tế hoặc NHNN cấp → Confirmed: Techcombank, VPBank, VietnamBiz
+- Thẻ NAPAS nội địa bắt đầu bằng 9704 → Confirmed: napas.com.vn (nguồn chính thức)
+- Visa bắt đầu bằng số 4, Mastercard bắt đầu bằng số 5 → Confirmed: Techcombank, VPBank
+- Mã CIF (Customer Information File) dùng để liên kết hồ sơ khách hàng → Confirmed: Timo, VPBank
+- Ngày 01/07/2025 ngừng giao dịch thẻ từ, bắt buộc thẻ chip → Confirmed: VTV, NHNN Công văn 1099/NHNN-TT, Thông tư 18/2024/TT-NHNN
+- Số tài khoản gồm 8 đến 15 chữ số → Confirmed: SeaBank, VPBank, VIB, Timo
+- Số thẻ thay đổi khi làm lại thẻ, số tài khoản giữ nguyên → Confirmed: VIB, SeaBank
+- Thẻ tín dụng Home Credit hợp tác Visa, đăng ký 100% online → Confirmed: homecredit.vn
+- Trả góp lãi suất 0% trên ứng dụng Home Credit → Confirmed: homecredit.vn
 
-## 3. Removed Claims (không verify được)
-- Không có claim nào bị xóa.
+## 2. Corrections Made
+
+- **Original**: Không có thông tin về ngưng thẻ từ
+- **Corrected To**: Thêm thông tin "Từ ngày 01/07/2025, NHNN đã chính thức ngừng chấp nhận giao dịch bằng thẻ từ, bắt buộc chuyển sang thẻ chip"
+- **Source**: VTV.vn, Công văn 1099/NHNN-TT ngày 19/02/2025
+
+## 3. Removed Claims
+
+- Không có claim nào bị xóa. Tất cả thông tin trong bài đều được verify thành công.

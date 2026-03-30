@@ -16,6 +16,15 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
 4. **Key Takeaways**: Every article MUST include a `[key_takeaways]...[/key_takeaways]` shortcode block after the intro paragraph (before the first image). Contains 5-7 bullet points summarizing the most important facts. MUST have a blank line before `[/key_takeaways]`.
 5. **No Brand Prefix in Expert Remarks**: Blockquote expert remarks must NOT be prefixed with brand name (e.g., "Chuyên gia WIN Flavor:", "GOHA Note:"). The blockquote stands alone as objective expert insight.
 6. **Keyword Density**: The **primary keyword** MUST appear **5-10 times** in the article body (excluding metadata table), scaled by content length. All **secondary keywords** and **semantic/LSI keywords** from `research.md` MUST also appear at least once naturally in the article. Verify keyword presence during the Audit phase.
+7. **Heading Structure Cap**: Every article MUST have **maximum 5 H2 headings**. Use multiple H3/H4 subheadings under each H2 to cover depth. If research reveals content gaps, fold them into the most relevant existing H2 as subheadings - do NOT create additional H2s.
+8. **Mandatory WIN Flavor Solution Heading**: One of the 5 H2s MUST be a "Giải pháp từ WIN Flavor" section that maps WIN Flavor products/services to the article topic.
+9. **B2B F&B Tone**: Write for **enterprise F&B clients** (B2B manufacturers, production facilities, R&D teams). Use professional but accessible language. Avoid consumer-facing marketing tone.
+10. **Content Depth Hierarchy**: Classify content blocks by priority:
+    - **Nội dung cốt lõi** (Core): Deep, detailed writing about the primary keyword topic. This is the bulk of the article.
+    - **Nội dung phụ bổ trợ** (Supporting): Related info that needs detailed explanation to understand the core topic. Write thoroughly but less than core.
+    - **Kiến thức thêm** (Supplementary knowledge): Write briefly - this is extra context, not the main focus.
+    - **Giải nghĩa ngắn** (Quick definitions): Explain in 1 paragraph maximum. Get to the point fast.
+11. **Internal Link Matching**: When writing, cross-reference the internal link database in `Persona Brand/MQ - WIN Flavor/internal-links-WIN-Flavor.md` (~900 URLs). Insert 3-7 relevant internal links per article using natural anchor text. Match links by topical relevance to the article content.
 
 ---
 
@@ -68,11 +77,16 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `research.md`
     - `competitor-insights.md`
     - `Persona Brand/MQ - WIN Flavor/central-entity-WIN-Flavor.md` (To map relevant Solutions, Flavors & Ingredients)
-- **Constraint**: MUST map at least one WIN Flavor Solution/Ingredient (from `central-entity`) as a key solution in the outline.
+- **Structural Constraints**:
+    1. **Maximum 5 H2 headings**. Use H3/H4 subheadings for depth and subtopics.
+    2. If competitor analysis or research reveals content gaps, integrate them as subheadings under the most relevant H2 - NEVER add a 6th H2.
+    3. One H2 MUST be dedicated to "Giải pháp từ WIN Flavor" (or contextually equivalent).
+    4. Label each outline section with its Content Depth type: `[CỐT LÕI]`, `[BỔ TRỢ]`, `[KIẾN THỨC THÊM]`, or `[GIẢI NGHĨA]`.
+    5. MUST map at least one WIN Flavor Solution/Ingredient (from `central-entity`) as a key solution.
 - **Output**: `outline.md`
 
 ## 6. Phase 5: Authority Writing (Drafting)
-**Goal**: Write the "Expert Scientist" draft.
+**Goal**: Write the "Expert Scientist" draft for B2B F&B audience.
 
 - **Skill**: `.agent/skills/writing-semantic-content/SKILL.md`
 - **Inputs**:
@@ -81,10 +95,15 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
     - `outline.md`
     - `Persona Brand/MQ - WIN Flavor/source-context-WIN-Flavor.md` (Mandatory Stylistic Context)
     - `Persona Brand/MQ - WIN Flavor/legal-references-2026.md` (Load ONLY if legal content is present in Research).
+    - `Persona Brand/MQ - WIN Flavor/internal-links-WIN-Flavor.md` (For internal link matching)
 - **Constraint**: 
     1. Writer must strict follow "WIN Flavor" identity (Never use "chúng tôi").
     2. Maintain "Professional but Simple" voice (Grade 5 readability, No Fluff) as per `persona-WIN-Flavor-skill.md`. 
     3. Follow the "Ingredient-First" rule.
+    4. **Max 5 H2s** - use rich subheadings (H3/H4) for depth.
+    5. **Content Depth Hierarchy**: Apply depth labels from outline. Core content gets full treatment; supplementary knowledge stays brief; definitions fit in 1 paragraph.
+    6. **B2B Tone**: Address enterprise F&B clients directly - xưởng sản xuất, nhà máy, đội ngũ R&D, doanh nghiệp F&B. Avoid consumer-facing language.
+    7. **Internal Links**: Cross-reference `internal-links-WIN-Flavor.md` to insert 3-7 topically relevant internal links with natural Vietnamese anchor text.
 - **Output**: `article.md` (Draft 1)
 - **MANDATORY**: The article MUST start with an **SEO Metadata Table** before the H1 heading. Use this exact format (use short dashes `-`/`--` for outline hierarchy, never em dashes):
 
@@ -114,9 +133,12 @@ It enforces strict adherence to **Semantic SEO**, **Competitor Benchmarking**, a
 - **Actions**:
     1.  **Identity Check**: Ensure ALL references use "**WIN Flavor**" (Remove all "chúng tôi").
     2.  **Simplicity Audit**: Enforce Grade 5 readability. Remove jargon/fluff unless explained simply.
-    3.  **Tone Audit**: Apply "Expert Scientist" and "Solution-Oriented" filters.
+    3.  **Tone Audit**: Apply "Expert Scientist" and "Solution-Oriented" filters. Ensure B2B F&B tone throughout.
     4.  **Signature**: Ensure correct Signature from `central-entity-WIN-Flavor.md`.
     5.  **Expert Remarks**: Inject 1-2 blockquotes containing expert advice or insights. Do NOT prefix with "Chuyên gia WIN Flavor:" or any brand name. The blockquote should stand alone as objective expert insight.
+    6.  **H2 Cap Check**: Verify article has maximum 5 H2 headings. Merge any excess into existing H2s as subheadings.
+    7.  **Internal Link Audit**: Verify 3-7 internal links from `internal-links-WIN-Flavor.md` are present with natural anchor text.
+    8.  **Content Depth Check**: Verify core content is detailed, supplementary is brief, definitions are 1-paragraph.
 - **Output**: `article.md` (WIN Flavor Branded Version)
 
 ## 8. Phase 7: Fact-Checking & Deep Research (Optimized)

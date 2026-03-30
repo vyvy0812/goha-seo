@@ -19,8 +19,10 @@ Kết hợp Semantic SEO + HCVN Persona + Quality Audit trong một pipeline duy
 
 ## Global Quality Rules (áp dụng toàn bộ pipeline)
 
-> **[HARD PIPELINE RULE]**: Quy trình có 10 Phase. Agent BẮT BUỘC phải thực thi tuần tự từ Phase 1 đến Phase 10. TUYỆT ĐỐI KHÔNG dùng tool `notify_user` để ngắt ngang quy trình khi chưa tạo xong `fact-check-report.md`, `audit-report.md` và `article.md` bản final. Không được skip Phase 7 (Fact Check) dưới mọi hình thức!
-
+> **[HARD PIPELINE RULE BẮT BUỘC]**: Quy trình có 10 Phase và CHUỖI CÁC SKILL BẮT BUỘC (analyzing-search-intent, extracting-keywords, analyzing-competitors...). Agent BẮT BUỘC phải thực thi TUẦN TỰ TỪ PHASE 1 ĐẾN PHASE 10.
+> **TUYỆT ĐỐI KHÔNG BỎ QUA (SKIP) BẤT KỲ PHASE NÀO HAY RULE NÀO DƯỚI MỌI HÌNH THỨC**, ngay cả khi tưởng chừng không cần thiết hoặc người dùng đã cho sẵn outline.
+> TẤT CẢ các rule trong Workflow, trong file Persona và định dạng trong Skills phải được **THỰC THI 100% HIỆU LỰC, KHÔNG ĐƯỢC TỰ Ý RÚT GỌN**.
+> TUYỆT ĐỐI KHÔNG dùng tool `notify_user` để ngắt ngang quy trình khi chưa tạo xong TOÀN BỘ các artifacts (competitors data, search-intent, research, outline, article, fact-check-report, audit-report).
 1. **Content Freshness**: MUST dùng `search_web` verify thông tin mới nhất trước khi viết. Không dùng dữ liệu cũ.
 2. **No Emoji**: KHÔNG dùng emoji (⭐, ⚠️, 🔥...). Thay bằng **(MỚI)**, **Lưu ý**, **Quan trọng**.
 3. **No Emdash/Dash**: KHÔNG dùng emdash (—) hoặc dash (–, -) trong heading, title, nội dung. Thay bằng từ tiếng Việt: "đến", "và", "kèm", "với", hoặc dấu phẩy.
@@ -346,7 +348,7 @@ h1, h2, h3 { font-size: 12pt !important; }
 #### Kết bài
 - 2 đến 3 câu tóm tắt
 - Chứa KW chính
-- CTA dẫn về blog: "ghé thăm blog [Cẩm nang Tài chính số Toàn diện](https://www.homecredit.vn/blog) của Home Credit" (anchor text PHẢI là "Cẩm nang Tài chính số Toàn diện", KHÔNG rút gọn)
+- CTA dẫn về blog: "ghé thăm blog [cẩm nang tài chính số](https://www.homecredit.vn/blog) của Home Credit" (anchor text PHẢI là "cẩm nang tài chính số", KHÔNG rút gọn hay dùng cụm từ khác)
 
 #### Disclaimer (bắt buộc, trước chữ ký)
 > *Lưu ý: Thông tin trong bài mang tính chất tham khảo, được tổng hợp từ thị trường và không đại diện cho toàn bộ sản phẩm, dịch vụ của Home Credit.*

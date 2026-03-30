@@ -17,7 +17,7 @@ h1, h2, h3 { font-size: 12pt !important; }
 | | định chế tài chính quốc tế |
 | KW Density Target | 1% đến 1.5% |
 | Internal Link Density | 0.8% đến 1.2% |
-| Word Count Target | 1500 đến 2000 từ (7 H2) |
+| Word Count Target | 1800 đến 2200 từ (8 H2) |
 
 ---
 
@@ -34,24 +34,25 @@ h1, h2, h3 { font-size: 12pt !important; }
 ### 3.4. Tạo cơ chế thanh toán hiệu quả
 
 ## 4. Phân loại định chế tài chính theo hình thức tổ chức
-### 4.1. Định chế tài chính trung gian
-### 4.2. Định chế tài chính bán trung gian
+### 4.1. Nhóm định chế nhận tiền gửi
+- Ngân hàng thương mại
+- Liên hiệp tín dụng
+- Hiệp hội tiết kiệm và cho vay
+- Ngân hàng tiết kiệm
+### 4.2. Nhóm định chế không nhận tiền gửi
+- Quỹ đầu tư
+- Công ty môi giới/chứng khoán
+- Công ty bảo hiểm
+- Công ty tài chính
 
-## 5. Các định chế tài chính theo quy định pháp luật Việt Nam
-### 5.1. Ngân hàng trung ương
-### 5.2. Ngân hàng thương mại
-### 5.3. Liên hiệp tín dụng
-### 5.4. Ngân hàng và công ty đầu tư
-### 5.5. Công ty môi giới
-### 5.6. Công ty bảo hiểm
-### 5.7. Hiệp hội tiết kiệm và cho vay
+## 5. Các định chế tài chính quốc tế nổi bật
+### 5.1. Quỹ Tiền tệ Quốc tế (IMF)
+### 5.2. Ngân hàng Thế giới (World Bank)
+### 5.3. Ngân hàng Phát triển Châu Á (ADB)
 
-## 6. Các định chế tài chính quốc tế nổi bật (content gap)
-### 6.1. Quỹ Tiền tệ Quốc tế (IMF)
-### 6.2. Ngân hàng Thế giới (World Bank)
-### 6.3. Ngân hàng Phát triển Châu Á (ADB)
+## 6. Rủi ro liên quan đến định chế tài chính cần lưu ý
 
-## 7. Rủi ro liên quan đến định chế tài chính cần lưu ý (content gap)
+## 7. Trải nghiệm dịch vụ tài chính tiêu dùng cùng Home Credit
 
 ## Kết bài
 
@@ -68,8 +69,8 @@ h1, h2, h3 { font-size: 12pt !important; }
 ## Đang so với các đối thủ
 - **VPBank**: https://www.vpbank.com.vn/bi-kip-va-chia-se/corporate-story-and-tips/corporate-sat-category/dinh-che-tai-chinh
 - **VIB**: https://www.vib.com.vn/vn/cam-nang/ngan-hang-so/tien-ich-va-trai-nghiem/dinh-che-tai-chinh
-- **MISA SME**: https://sme.misa.vn/223911/dinh-che-tai-chinh-la-gi/
 - **DNSE**: https://www.dnse.com.vn/hoc/dinh-che-tai-chinh-la-gi
+- **MISA SME**: https://sme.misa.vn/223911/dinh-che-tai-chinh-la-gi/
 
 ---
 
