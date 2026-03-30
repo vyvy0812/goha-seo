@@ -84,11 +84,13 @@ Thị trường tài chính năm 2026 chứng kiến những bước nhảy vọ
 
 Giao dịch truyền thống ở quầy được nhiều cô chú và nhóm khách hàng có thu nhập ổn định ưu ái. Tuy mức lợi nhuận được đánh giá thấp hơn ứng dụng số, kênh này luôn bảo đảm sự an toàn tối cao nhất và có đầy đủ mọi chứng từ minh bạch. 
 
-| Nhóm Ngân hàng | Mức lãi suất tham khảo (%/năm) | Ghi chú |
+| Ngân hàng | Mức lãi suất tham khảo (%/năm) | Ghi chú |
 |---|---|---|
-| Vietcombank, BIDV, Agribank | 2.1% – 6.8% | Phụ thuộc kỳ hạn cụ thể |
-| Techcombank, MBBank | 4.5% – 7.5% | Áp dụng cho kỳ hạn dài |
-| VPBank, Sacombank | 6.1% – 7.1% | Kỳ hạn 12 tháng (cá biệt lên tới 8.8%) |
+| Vietcombank | 2.1% – 5.3% | Áp dụng tại quầy và online (cao nhất kỳ hạn 24 tháng) |
+| BIDV, Agribank | 2.6% – 6.8% | BIDV online ghi nhận mức 6.8% từ kỳ hạn 12 tháng |
+| MBBank | 3.7% – 7.5% | Mức 7.5% áp dụng riêng kỳ hạn 24-60 tháng |
+| VPBank, Techcombank | 4.5% – 7.1% | Mức cộng thêm phụ thuộc vào biểu bậc thang số tiền |
+| Sacombank | 4.6% – 8.8% | Mức đỉnh 8.8% chỉ áp dụng kỳ hạn 36 tháng thỏa điều kiện |
 
 Nhìn vào **bảng lãi suất tiết kiệm tại quầy** hiện tại, nhóm ngân hàng thương mại cổ phần (Techcombank, VPBank, Sacombank) có xu hướng duy trì mức sinh lời cạnh tranh để thu hút dòng tiền. 
 
@@ -96,11 +98,11 @@ Nhìn vào **bảng lãi suất tiết kiệm tại quầy** hiện tại, nhóm
 
 Xu hướng gửi trực tuyến ngày càng trở nên rất mạnh mẽ. Ngân hàng dùng phương án chuyển tiết kiệm chi phí mặt bằng vào chính phần lợi tức cho khách hàng. Các sản phẩm đều rất an toàn khi bạn tự thao tác.
 
-| Ngân hàng số | Mức ưu đãi online cao nhất (%/năm) | Điều kiện áp dụng |
+| Ngân hàng số / TMCP | Ưu đãi cao nhất (%/năm) | Điều kiện áp dụng |
 |---|---|---|
-| Cake by VPBank | Lên tới 9.0% | Khách hàng mới thỏa điều kiện thưởng |
-| Vikki Bank | 8.5% – 9.2% | Kỳ hạn 12 tháng |
-| GPBank, SeABank | 8.3% – 9.0% | Chương trình cộng thêm phần trăm |
+| Cake by VPBank | 8.8% – 9.0% | Tặng kèm lãi suất cho khách hàng gửi lần đầu |
+| Vikki Bank | Lên tới 9.2% | Áp dụng cho các mốc kỳ hạn từ 12 tháng |
+| GPBank, SeABank | 8.3% – 9.0% | Yêu cầu số tiền gửi lớn theo hạng mức ưu đãi |
 
 Qua **bảng lãi suất tiết kiệm trực tuyến** trên, có thể thấy rõ mức lợi tức hình thức này vượt trội hơn truyền thống rất nhiều. Người trẻ rất ưu tiên sử dụng điện thoại thông minh cho quyết định lưu giữ dòng tiền của mình. 
 
