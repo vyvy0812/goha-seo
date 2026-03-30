@@ -19,6 +19,8 @@ Kết hợp Semantic SEO + HCVN Persona + Quality Audit trong một pipeline duy
 
 ## Global Quality Rules (áp dụng toàn bộ pipeline)
 
+> **[HARD PIPELINE RULE]**: Quy trình có 10 Phase. Agent BẮT BUỘC phải thực thi tuần tự từ Phase 1 đến Phase 10. TUYỆT ĐỐI KHÔNG dùng tool `notify_user` để ngắt ngang quy trình khi chưa tạo xong `fact-check-report.md`, `audit-report.md` và `article.md` bản final. Không được skip Phase 7 (Fact Check) dưới mọi hình thức!
+
 1. **Content Freshness**: MUST dùng `search_web` verify thông tin mới nhất trước khi viết. Không dùng dữ liệu cũ.
 2. **No Emoji**: KHÔNG dùng emoji (⭐, ⚠️, 🔥...). Thay bằng **(MỚI)**, **Lưu ý**, **Quan trọng**.
 3. **No Emdash/Dash**: KHÔNG dùng emdash (—) hoặc dash (–, -) trong heading, title, nội dung. Thay bằng từ tiếng Việt: "đến", "và", "kèm", "với", hoặc dấu phẩy.
@@ -138,11 +140,11 @@ Content Tone: [Informational / Commercial-Informational / Transactional]
 | [topic] | ✅/❌ | ✅/❌ | ✅/❌ | ✅ / ✅ (content gap) |
 ```
 
-- **Nguyên tắc**:
-    - Coi outline đối thủ là **template**: mọi topic đối thủ cover → outline HC **PHẢI có**
-    - Topic nào ≥2 đối thủ cover → heading **bắt buộc** trong outline
-    - Topic nào 0 đối thủ cover nhưng liên quan KW phụ → heading **mới** (ghi nhận nội bộ là content gap, nhưng KHÔNG gắn `(content gap)` vào heading output)
-    - Heading HC phải **chi tiết hơn** đối thủ: tách H3 rõ ràng hơn, thêm sub-topic cụ thể
+- **Nguyên tắc Research & Gom nhóm Heading**:
+    - **Tối đa 5 H2** (không bao gồm FAQ và Kết bài). Tuyệt đối không để bài viết bị rối vì quá nhiều H2.
+    - Cần **merge (gộp) các nội dung tương tự** hoặc trùng lặp vào chung một H2 lớn.
+    - **Tiêu chí lên Heading**: Chỉ những chủ đề cốt lõi, độc lập mới được chọn làm H2. Những nội dung nhỏ, chi tiết bổ trợ chỉ xứng đáng làm H3, 1 đoạn văn, hoặc 1 câu thì **hãy để chính xác như vậy**, không lạm dụng tạo thêm H2.
+    - Mọi topic đối thủ cover → outline HC **PHẢI có**, nhưng dưới dạng gộp chung vào H2 lớn hoặc làm H3/bullet point. Không copy nguyên xi cấu trúc nhiều H2 của đối thủ.
 - **Bảng so sánh KHÔNG đưa vào outline output** — chỉ dùng nội bộ
 - **Danh sách đối thủ (brand + URL) PHẢI đưa vào outline output**
 - **Output**: `Keywords/Home Credit/[keyword-slug]/competitors/` (lưu từng file đối thủ riêng)
@@ -176,11 +178,11 @@ Content Tone: [Informational / Commercial-Informational / Transactional]
 
 - **Nguyên tắc**:
     - Match → **BẮT BUỘC** thêm **1 H2** promote dịch vụ, đặt **trước Kết bài**
-    - Heading dạng: `## [Số]. [Hành động] cùng Home Credit` — ví dụ: `## 5. Mua xe máy trả góp cùng Home Credit`
-    - Nội dung: giới thiệu ngắn gọn + gắn **internal link** từ bảng mapping
+    - Heading dạng **quảng cáo hấp dẫn**: `## [Số]. [Hành động] cùng Home Credit: [USP/Offer nổi bật]` — ví dụ: `## 5. Mua xe máy trả góp cùng Home Credit: Lãi suất 0%, Vay từ 0 đồng!` hoặc `## 6. Mở thẻ tín dụng Home Credit: Miễn phí thường niên, Trả góp 0%`
+    - Nội dung: Viết hấp dẫn như một mẫu quảng cáo (copywriting) nhấn mạnh vào lợi ích nổi bật của sản phẩm (VD: "Lãi suất 0%", "Duyệt vay nhanh 3 phút", "100% Online", "Không cần chứng minh thu nhập"). Đưa ra Call-to-action mạnh mẽ và gắn **internal link** từ bảng mapping.
     - Nhiều dịch vụ match → chọn **1 dịch vụ liên quan nhất**
     - Không match → **bỏ qua**, không thêm heading promote
-    - Heading promote phải **tự nhiên**, không gượng ép
+    - Heading promote phải thể hiện giá trị, thu hút click và **kích thích chuyển đổi (Lead Generation)**.
 
 **Lead Generation Title Priority (bắt buộc):**
 - Khi keyword chính/phụ **liên quan đến dịch vụ HC** hoặc **chứa intent thương mại** (mua ở đâu, giá, bao nhiêu tiền, có nên mua, so sánh...) → **Title và heading PHẢI ưu tiên chứa từ khóa thương mại đó**
@@ -246,7 +248,9 @@ h1, h2, h3 { font-size: 12pt !important; }
 ### Outline Checklist (nội bộ, KHÔNG xuất ra)
 - [ ] Title chứa KW chính, ≤ 60 ký tự
 - [ ] Meta 130 đến 160 ký tự, chứa KW chính
-- [ ] H2 đánh số, ≥ 3 H2, 1 đến 2 H2 chứa KW chính
+- [ ] H2 đánh số, từ 3 đến **tối đa 5 H2** (không tính FAQ và Kết bài)
+- [ ] Các ý tương tự đã được merge gọn gàng. Ý nhỏ được đưa vào H3, đoạn văn, hoặc câu (không lạm dụng H2)
+- [ ] 1 đến 2 H2 chứa KW chính
 - [ ] H3 phân cấp (3.1, 3.2...), không bold
 - [ ] FAQ 3 đến 5 câu, sau Kết bài, trước Disclaimer
 - [ ] Internal links chỉ `homecredit.vn`, không gom cụm
@@ -318,6 +322,13 @@ h1, h2, h3 { font-size: 12pt !important; }
 - **KHÔNG** dùng dạng `>>> Xem thêm: [Title](link)`. Chỉ đi link qua **anchor text** tự nhiên trong câu văn.
 - Mỗi URL chỉ xuất hiện **1 lần duy nhất** trong toàn bài
 - Chọn 10 đến 15 link từ database có chủ đề liên quan nhất đến nội dung bài
+- **Anchor text PHẢI khớp nội dung bài đích** (QUAN TRỌNG): Khi chọn link từ database, anchor text trong câu văn PHẢI mô tả đúng nội dung mà bài viết đích thực sự nói đến. KHÔNG được dùng anchor text một đằng nhưng link đến bài viết có nội dung khác. Ví dụ:
+    - SAI: anchor "tăng trưởng tín dụng" → link đến bài "Dư nợ tín dụng là gì?" (bài nói về dư nợ, không phải tăng trưởng)
+    - SAI: anchor "lợi nhuận và chi phí vận hành" → link đến bài "Báo cáo tài chính là gì?" (bài nói về BCTC, không phải lợi nhuận)
+    - SAI: anchor "tài khoản thanh toán" → link đến bài "Số dư khả dụng là gì?" (bài nói về số dư, không phải tài khoản)
+    - ĐÚNG: anchor "dư nợ tín dụng" → link đến bài "Dư nợ tín dụng là gì?"
+    - ĐÚNG: anchor "lãi suất thả nổi" → link đến bài "Lãi suất thả nổi là gì?"
+    - Nếu không tìm được URL có nội dung khớp với ngữ cảnh đang viết → **KHÔNG gắn link**, viết text thường. Thà thiếu 1 link còn hơn gắn link sai ngữ cảnh.
 
 #### Hình ảnh
 - Mỗi H2 section: **1 ảnh + 1 caption** (1 câu mô tả ngắn)
@@ -336,7 +347,7 @@ h1, h2, h3 { font-size: 12pt !important; }
 #### Kết bài
 - 2 đến 3 câu tóm tắt
 - Chứa KW chính
-- CTA dẫn về blog: "ghé thăm blog Tài chính số Toàn diện của Home Credit"
+- CTA dẫn về blog: "ghé thăm blog [Cẩm nang Tài chính số Toàn diện](https://www.homecredit.vn/blog) của Home Credit" (anchor text PHẢI là "Cẩm nang Tài chính số Toàn diện", KHÔNG rút gọn)
 
 #### Disclaimer (bắt buộc, trước chữ ký)
 > *Lưu ý: Thông tin trong bài mang tính chất tham khảo, được tổng hợp từ thị trường và không đại diện cho toàn bộ sản phẩm, dịch vụ của Home Credit.*
@@ -355,8 +366,10 @@ Chọn **đúng 1 signature** từ bảng tra cứu (persona Mục 11+12), viế
 | Kiến thức tài chính, quản lý chi tiêu | Signature 7 – Cẩm nang Tài chính |
 | Ứng dụng Home Credit | Signature bổ sung – Ứng dụng HC |
 
-## 8. Phase 7: Fact-Checking & Deep Research (Auto-Correction)
-**Goal**: Xác minh 100% claims trong bài, chống hallucination. Tự động sửa lỗi, KHÔNG cần user check.
+## 8. Phase 7: MANDATORY Deep Research Fact-Checking (Auto-Correction)
+**CRITICAL RULE**: Lệnh bắt buộc hệ thống! Agent KHÔNG ĐƯỢC PHÉP skip Phase 7. TẤT CẢ các bài viết phải trải qua bước check này trước khi xử lý tiếp.
+
+**Goal**: Nghiêm ngặt xác minh 100% claims (lãi suất, giá, thông số) bằng Deep Research, chống hallucination (AI tự bịa số). Tự động sửa lỗi sai lệch trong `article.md`.
 
 - **Skill**: `.agent/skills/rechecking-facts/SKILL.md`
 - **Input**: `article.md`

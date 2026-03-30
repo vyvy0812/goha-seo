@@ -34,14 +34,16 @@ ELSE:
 
 ### Phase 2: Deep Research & Verification
 
-#### Action
-For each extracted claim, perform targeted research using the `search_web` tool or internal knowledge items.
+**MANDATORY DEEP RESEARCH PROTOCOL**: You MUST NOT rely on your internal knowledge for any numbers, dates, prices, or technical specifications. You MUST execute at least 3 distinct `search_web` queries to cross-reference facts before making a decision.
 
-1.  **Formulate precise queries**:
+#### Action
+For each extracted claim, perform targeted deep research using the `search_web` tool or internal knowledge items.
+
+1.  **Formulate precise queries** (Minimum 3 searches required):
     *   *Example*: `site:gov.vn "Nghị định 15/2018/NĐ-CP"`
-    *   *Example*: `tiết kiệm điện năng động cơ servo máy ép nhựa`
+    *   *Example*: `lãi suất techcombank mới nhất 2026`
 2.  **Evaluate Sources**:
-    *   Prioritize authoritative sources (Gov sites, manufacturer specs, official brand context files, renowned industry reports).
+    *   Prioritize authoritative sources (Gov sites, manufacturer specs, official brand context files, renowned industry reports, official bank websites).
     *   Ignore low-quality blogs or generic competitor sites for factual truth.
 3.  **Compare**: Check the claim in `article.md` against the researched truth.
 
