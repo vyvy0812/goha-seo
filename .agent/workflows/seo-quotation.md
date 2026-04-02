@@ -16,6 +16,15 @@ Workflow phân tích toàn diện hiện trạng SEO của một website và xu�
 - `tools/rank-checker/` — Ranking data (nếu có)
 - `Persona Brand/` — Brand voice (nếu báo giá cho brand nội bộ)
 
+**GOHA Brand Assets:**
+- **Logo (SVG):** `https://static.goha.vn/wp-content/uploads/2025/06/Full.svg`
+- **Background (PNG):** `https://static.goha.vn/wp-content/uploads/2025/07/Background-1.png`
+
+**GOHA Google Ads Pricing:**
+- **Phí Setup:** 5,000,000 ₫ (1 lần) — audit, keyword research, campaign structure, conversion tracking, ad copy
+- **Phí quản lý:** 20% ngân sách quảng cáo thực chi/tháng
+- **Phí tối thiểu:** 4,000,000 ₫/tháng (áp dụng khi ngân sách Ads < 20 triệu/tháng)
+
 ---
 
 ## Phase 1: Thu thập thông tin khách hàng
