@@ -65,7 +65,7 @@ Chèn **ở cuối bài, trước phần CHỮ KÝ**:
 - Có **chữ ký cuối bài** (HCVN_BLOG SIGNATURE, format in nghiêng tất cả).
 
 ### Độ dài bài viết
-- Bài chuẩn: **1000 – 1500 từ**.
+- Cột mốc bài chuẩn: **Tối thiểu 2500 từ** (áp dụng tiêu chuẩn nội dung chuyên sâu).
 
 ---
 
@@ -79,18 +79,11 @@ Chèn **ở cuối bài, trước phần CHỮ KÝ**:
 | Banner | 1440 × 480 | Bắt buộc có |
 
 - **Định dạng**: WebP.
-- Bài 1000–1500 từ → tối thiểu **4–5 hình ảnh**.
+- Bài 2500+ từ → tối thiểu **8–10 hình ảnh**.
 
 ### Quy tắc chọn ảnh
-- ❌ Không dùng ảnh có watermark.
-- ❌ Không dùng hình hoạt hình 2D/3D.
-- ❌ Không dùng hình có tiền giấy, tiền Đô la, tiền ngoại tệ.
-- ❌ Không sử dụng hình có nhà, xe ô tô.
-- ❌ Không dùng hình bị ám màu, bị mờ, độ phân giải thấp.
-- ❌ Không dùng hình chứa logo/watermark thương hiệu khác.
-- ✅ **Prefer** sử dụng hình từ Shutterstock.
-- ✅ Đối với bài TW/CD: sử dụng hình đúng hãng, đúng thương hiệu, đúng dòng sản phẩm → có thể capture từ video MXH của brand.
-- ✅ Nếu prompt hình từ AI → phải có signal "AI" ở dưới. Chỉ áp dụng cho bài kiến thức tài chính. **Không dùng hình AI chứa người** (trừ source từ Home Credit).
+- **KHÔNG tự động chèn/add hình ảnh vào nội dung bài viết.** (Team thiết kế sẽ đảm nhiệm riêng khâu này)
+- Vẫn có thể đề xuất các vị trí đặt ảnh vào file notes nếu cần, nhưng không trực tiếp nhúng file ảnh/URL ảnh vào file content.
 
 ### Tool resize/compress ảnh
 - [Squoosh](https://squoosh.app)
@@ -141,7 +134,7 @@ Khi viết bài cho Home Credit Blog:
 7. **FAQs**: Bắt buộc, dựa trên từ khóa chính/phụ.
 8. **Disclaimer**: Chèn trước chữ ký cuối bài.
 9. **Internal link**: Chỉ domain `homecredit.vn`, mật độ 0.8%–1.2%, phân bổ tự nhiên theo context.
-10. **Hình ảnh**: Tối thiểu 4–5 ảnh, WebP, đúng quy cách kích thước.
+10. **Hình ảnh**: KHÔNG tự động chèn hình ảnh vào nội dung bài viết. Đoạn nào cần, chỉ cần để placeholder (VD: `[Chèn ảnh...]`).
 11. **Mật độ từ khóa**: Kiểm tra đạt 1%–1.5%.
 12. **Chữ ký cuối bài**: Chọn đúng mẫu signature theo chủ đề sản phẩm (xem Mục 11).
 

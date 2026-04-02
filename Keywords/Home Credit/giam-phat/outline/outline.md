@@ -9,68 +9,46 @@ h1, h2, h3 { font-size: 12pt !important; }
 | Field | Value |
 |---|---|
 | Title | Giảm phát là gì? Tác động và cách ứng phó hiệu quả |
-| Meta Description | Giảm phát là gì? Tìm hiểu nguyên nhân, ví dụ thực tế, công thức tính chỉ số giảm phát GDP và cách ứng phó khi giảm phát xảy ra tại Việt Nam. |
-| KW chính | giảm phát là gì |
-| KW phụ | giảm phát |
-| | ví dụ về giảm phát |
-| | giảm phát ở việt nam |
-| | công thức tính chỉ số giảm phát gdp |
-| KW Density Target | 1% – 1.5% |
-| Internal Link Density | 0.8% – 1.2% |
-| Word Count Target | 2000 – 2500 |
+| Meta Description | Tìm hiểu chi tiết giảm phát là gì, nguyên nhân và công thức tính chỉ số giảm phát GDP. Khám phá tác động của giảm phát ở Việt Nam và cách ứng phó hiệu quả. |
+| KW chính | giảm phát |
+| KW phụ | giảm phát là gì<br>ví dụ về giảm phát<br>giảm phát ở việt nam<br>công thức tính chỉ số giảm phát gdp |
+| Mật độ KW | 1% đến 1.5% |
+| Mật độ link nội bộ | 0.8% đến 1.2% |
 
 ---
 
-## Intro (70–150 chữ)
+## Intro (70 đến 150 chữ)
 
-## 1. Giảm phát là gì? Ví dụ về giảm phát
-### 1.1. Khái niệm giảm phát (Deflation)
-### 1.2. Ví dụ minh họa dễ hiểu về giảm phát
+## 1. Giảm phát là gì? Phân biệt với lạm phát
+### 1.1 Khái niệm và ví dụ về giảm phát
+### 1.2 Phân biệt giảm phát và lạm phát
 
 ## 2. Nguyên nhân dẫn đến giảm phát
-### 2.1. Tổng cầu suy giảm
-### 2.2. Tổng cung tăng mạnh
-### 2.3. Cung tiền bị thắt chặt
-### 2.4. Cấu trúc vốn doanh nghiệp thay đổi
+### 2.1 Tổng cầu suy giảm và tổng cung tăng mạnh
+### 2.2 Cung tiền bị thắt chặt và cấu trúc vốn thay đổi
 
-## 3. Tác động của giảm phát đến nền kinh tế
-### 3.1. Lợi ích ngắn hạn đối với người tiêu dùng
-### 3.2. Tác hại dài hạn đối với doanh nghiệp và người lao động
+## 3. Tác động của giảm phát và cách ứng phó
+### 3.1 Tác động của giảm phát đến nền kinh tế
+### 3.2 Các biện pháp ứng phó với giảm phát
 
-## 4. Phân biệt giảm phát và lạm phát
+## 4. Chỉ số giảm phát GDP là gì? Công thức tính
+### 4.1 Chỉ số giảm phát GDP là gì? Công thức tính toán
+### 4.2 Phân biệt chỉ số giảm phát GDP và CPI
 
-## 5. Công thức tính chỉ số giảm phát GDP
-### 5.1. Chỉ số giảm phát GDP là gì
-### 5.2. Công thức tính chỉ số giảm phát GDP
-### 5.3. Phân biệt chỉ số giảm phát GDP và CPI
-
-## 6. Giảm phát ở Việt Nam qua các giai đoạn
-
-## 7. Các biện pháp ứng phó với giảm phát
-### 7.1. Tăng cung tiền và giảm lãi suất
-### 7.2. Tăng chi tiêu công và giảm thuế
-### 7.3. Nới lỏng tín dụng và hỗ trợ doanh nghiệp
+## 5. Giảm phát ở Việt Nam qua các giai đoạn
 
 ## Kết bài
 
-## 8. Những câu hỏi thường gặp về giảm phát
-### 8.1. Giảm phát có lợi hay có hại cho người dân?
-### 8.2. Giảm phát có từng xảy ra ở Việt Nam chưa?
-### 8.3. Chỉ số giảm phát GDP dùng để làm gì?
+## Những câu hỏi thường gặp về giảm phát
+### Giảm phát có lợi hay có hại cho người dân?
+### Giảm phát có từng xảy ra ở Việt Nam chưa?
+### Chỉ số giảm phát GDP dùng để làm gì?
 
 ## Disclaimer
 
 ---
-
 *Lưu ý: Thông tin trong bài mang tính chất tham khảo, được tổng hợp từ thị trường và không đại diện cho toàn bộ sản phẩm, dịch vụ của Home Credit.*
-
-## Đang so với các đối thủ
-- **VPBank**: https://www.vpbank.com.vn/bi-kip-va-chia-se/corporate-story-and-tips/corporate-sat-category/giam-phat-la-gi
-- **Thư viện pháp luật**: https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tai-chinh/55378/giam-phat-la-gi-phan-biet-giam-phat-va-lam-phat
-- **Vietcap**: https://www.vietcap.com.vn/kien-thuc/giam-phat-la-gi-phan-biet-lam-phat-va-giam-phat
-
 ---
-
 *Blog Home Credit - Cẩm nang Tài chính số Toàn diện*
 
 *Tài chính không chỉ là những con số mà còn là chìa khóa mở ra sự tự chủ và ổn định trong cuộc sống. Với Blog Cẩm nang Tài chính số Toàn diện, Home Credit sẽ giúp bạn:*

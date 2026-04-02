@@ -10,6 +10,7 @@ Tuân thủ persona HCVN: title tối đa 60 ký tự, meta 130 đến 160 ký t
 **Quy tắc writing style bắt buộc:**
 - ❌ **KHÔNG dùng emdash (—) hoặc dash (–, -)** trong heading, title, nội dung. Thay bằng từ tiếng Việt tương đương: "đến", "và", "kèm", "với", hoặc dấu phẩy.
 - ❌ **KHÔNG dùng flair words** (từ ngữ hoa mỹ, phóng đại). Viết đơn giản, trực tiếp, dễ hiểu.
+- ⚠️ **HARD RULE CHỮ KÝ**: Chữ ký cuối bài **BẮT BUỘC** phải được chọn dựa trên **context/chủ đề** của bài viết (Tuyệt đối không dùng 1 chữ ký mặc định cho mọi bài. Tham chiếu Bảng tra cứu Signature ở Mục 12 trong `persona-home-credit-skill.md`).
 
 **Quy tắc Lead Generation Title Priority (bắt buộc):**
 - Khi keyword chính/phụ **liên quan đến dịch vụ HC** (bảo hiểm, vay, trả góp, thẻ tín dụng...) hoặc **chứa intent thương mại** (mua ở đâu, giá, bao nhiêu tiền, có nên mua, so sánh...) → **Title và heading PHẢI ưu tiên chứa các từ khóa thương mại đó**
@@ -123,7 +124,7 @@ Tuân thủ persona HCVN: title tối đa 60 ký tự, meta 130 đến 160 ký t
 - **Nguyên tắc gộp heading**:
     - Các topic liên quan nhau **PHẢI gộp** thành 1 H2 chứa nhiều H3, thay vì tách riêng từng H2
     - Ví dụ: "Thiết kế" và "Pin" có thể gộp thành 1 H3 chung `Thiết kế kháng nước IP68 kèm pin 5000mAh`
-    - Ưu tiên **tối đa 4 đến 5 H2 nội dung chính** (không đếm Kết bài, FAQ, Disclaimer)
+    - Ưu tiên **từ 5 đến 6 H2 nội dung chính** (không đếm FAQ, Kết bài, Disclaimer). Tuy nhiên, phần nào cần chi tiết thì **PHẢI đi sâu chi tiết**, ví dụ mục ưu - nhược điểm cần liệt kê đầy đủ.
 - **Nguyên tắc đẩy xuống FAQ**:
     - Các topic phụ, topic chỉ cần trả lời ngắn (1 đến 3 câu) → **đẩy xuống FAQ** thay vì tạo H2 riêng
     - Ví dụ: "Ra mắt khi nào?", "Điểm AnTuTu?", "Có đáng mua không?" → chuyển thành câu hỏi FAQ
@@ -131,9 +132,8 @@ Tuân thủ persona HCVN: title tối đa 60 ký tự, meta 130 đến 160 ký t
 - **FAQ luôn 5 câu hỏi** (không ít hơn, không nhiều hơn)
     - Ưu tiên câu hỏi từ KW phụ và các topic đã đẩy xuống từ H2
     - Câu hỏi phải cụ thể, có giá trị cho người đọc
-- **Nguyên tắc format bảng so sánh**:
-    - Heading nào có nội dung **so sánh, phân biệt, đối chiếu** 2 khái niệm trở lên → description **PHẢI ghi rõ dùng format bảng**
-    - Ví dụ: `> Bảng so sánh theo tiêu chí: tính chất, đối tượng bảo vệ, phạm vi bồi thường, mức phí.`
+- **Nguyên tắc format bảng so sánh & ưu nhược điểm**:
+    - Heading nào có nội dung **so sánh, phân biệt, đối chiếu** hoặc liệt kê **ưu điểm, nhược điểm** → khi viết bài **PHẢI dùng format bảng**
     - Áp dụng cho cả H2 và H3
 
 ## 3. Tạo Outline
@@ -165,59 +165,31 @@ h1, h2, h3 { font-size: 12pt !important; }
 | Mật độ KW | 1% đến 1.5% |
 | Mật độ link nội bộ | 0.8% đến 1.2% |
 
-
 ---
 
 ## 1. [H2 heading đánh số, chứa KW chính/phụ]
-> [1 dòng mô tả ngắn gọn nội dung chính của H2]
-
 ### 1.1. [H3 sub-heading]
-> [1 dòng mô tả ngắn gọn nội dung H3]
-
 ### 1.2. [H3 sub-heading]
-> [1 dòng mô tả ngắn gọn nội dung H3]
 
 ## 2. [H2 heading tiếp theo]
-> [1 dòng mô tả ngắn gọn]
-
 ### 2.1. [H3]
-> [1 dòng mô tả ngắn gọn]
 
 ...(tiếp tục cho các H2/H3 còn lại)...
 
 ## [Số]. [Heading promote dịch vụ HC — nếu có match]
-> [1 dòng: giới thiệu dịch vụ HC liên quan, USP, link]
-
 ### [Số].1. Điều kiện đăng ký [dịch vụ HC]
-> [1 dòng: điều kiện cá nhân (tuổi, CCCD, thu nhập...)]
-
 ### [Số].2. Thủ tục [dịch vụ HC]
-> [1 dòng: hồ sơ cần chuẩn bị]
-
 ### [Số].3. Các bước [dịch vụ HC] tại Home Credit
-> [1 dòng: quy trình từng bước, online hay offline]
-
 ### [Số].4. Bảng thanh toán từng tháng khi [dịch vụ HC] [sản phẩm]
-> [1 dòng: bảng tính mẫu theo giá sản phẩm, chia kỳ hạn 6/12/18/24 tháng]
-
-## Kết bài
-> [1 dòng: tóm tắt, CTA mềm hướng đến dịch vụ HC]
 
 ## FAQ (5 câu)
 ### [Câu hỏi 1]?
-> [1 dòng tóm tắt câu trả lời]
-
 ### [Câu hỏi 2]?
-> [1 dòng tóm tắt câu trả lời]
-
 ### [Câu hỏi 3]?
-> [1 dòng tóm tắt câu trả lời]
-
 ### [Câu hỏi 4]?
-> [1 dòng tóm tắt câu trả lời]
-
 ### [Câu hỏi 5]?
-> [1 dòng tóm tắt câu trả lời]
+
+## Kết bài
 
 ## Disclaimer
 
@@ -228,7 +200,7 @@ h1, h2, h3 { font-size: 12pt !important; }
 - **[Brand 2]**: [URL]
 - **[Brand 3]**: [URL]
 ---
-[Signature đầy đủ, chọn theo chủ đề bài]
+[Signature đầy đủ, BẮT BUỘC CHỌN ĐÚNG theo context bài viết]
 ```
 
 - **Output**: `Keywords/Home Credit/[keyword-slug]/outline/outline.md`
@@ -239,16 +211,17 @@ Tự verify trước khi lưu:
 - [ ] Meta 130 đến 160 ký tự, chứa KW chính
 - [ ] H2 đánh số, tối thiểu 3 H2, 1 đến 2 H2 chứa KW chính
 - [ ] H3 phân cấp, không bold (font-weight normal)
-- [ ] FAQ đúng 5 câu, sau Kết bài, trước Disclaimer
-- [ ] Outline gọn: tối đa 4 đến 5 H2 nội dung chính, topic phụ đẩy xuống FAQ
-- [ ] Internal links chỉ homecredit.vn, không gom cụm
+- [ ] FAQ đúng 5 câu, trước Kết bài
+- [ ] Outline gọn: 5 đến 6 H2 nội dung chính, topic phụ đẩy xuống FAQ. Phần quan trọng (như ưu-nhược) phải liệt kê chi tiết
+- [ ] Internal links chỉ homecredit.vn, không gom cụm. Ưu tiên UX, gắn link đúng bối cảnh, đúng đối tượng. Anchor text nên là main keyword của bài đích (Ví dụ: phải là "tiết kiệm là gì" thay vì chỉ hyper chữ "tiết kiệm")
 - [ ] Nếu keyword match dịch vụ HC → có heading promote trước Kết bài, link đúng từ `dich-vu-hcvn.md`
 - [ ] Heading promote có đủ **4 H3**: điều kiện, thủ tục, các bước, bảng thanh toán
-- [ ] Disclaimer + Signature đầy đủ, đúng chủ đề
+- [ ] Disclaimer + Signature đầy đủ, BẮT BUỘC match với context bài viết
 - [ ] **KHÔNG có emdash (—) hoặc dash (–, -)** trong toàn bộ outline
 - [ ] **KHÔNG có flair words** (từ ngữ hoa mỹ, phóng đại)
 
 ## 5. Lưu và Thông báo
 // turbo
 - Lưu outline vào: `Keywords/Home Credit/[keyword-slug]/outline/outline.md`
-- Thông báo user hoàn thành, kèm link file
+- Chạy command để cập nhật tracker: `node .agent/scripts/update_hc_outline_tracker.js` (để tự động xếp bài vừa tạo lên đầu danh sách `_Danh_sach_Outline.md`)
+- Thông báo user hoàn thành, kèm link file outline và link file danh sách
