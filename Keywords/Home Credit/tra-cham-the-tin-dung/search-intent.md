@@ -1,36 +1,42 @@
 # Search Intent Analysis: trả chậm thẻ tín dụng
 
-## Keyword cluster
+## 1. Phân loại Intent (7-Type Model)
 
-| Vai trò | Keyword | Volume ước tính |
+| Intent Type | Mức độ | Dấu hiệu | Content Vehicle |
+|---|---|---|---|
+| **Informational** | Cao (chính) | PAA, Featured Snippet, bài viết dạng guide | Guide, Definition, How-to |
+| **Commercial** | Trung bình | So sánh phí phạt giữa các ngân hàng | Bảng so sánh, Comparison |
+| **Transactional** | Thấp (phụ) | CTA mở thẻ, đăng ký HC | CTA, Landing page |
+
+## 2. Micro-Intent (Know / Do / Go)
+
+| Micro-Intent | Query mẫu | Tỷ trọng |
 |---|---|---|
-| Chính | trả chậm thẻ tín dụng | Cao |
-| Phụ | trả chậm thẻ tín dụng có bị nợ xấu | Cao |
-| Phụ | lãi suất trả chậm thẻ tín dụng | Trung bình |
-| Phụ | phí phạt trả chậm thẻ tín dụng | Trung bình |
-| Phụ | chậm trả thẻ tín dụng | Trung bình |
-| Phụ | cách tính lãi trả chậm thẻ tín dụng | Trung bình |
+| **Know** | "trả chậm thẻ tín dụng có sao không", "có bị nợ xấu không" | 60% |
+| **Do** | "cách tính lãi trả chậm", "cách xử lý khi trả chậm" | 30% |
+| **Go** | "thẻ tín dụng Home Credit", "mở thẻ tín dụng online" | 10% |
 
-## Intent Classification
+## 3. SERP Features phân tích
 
-| Yếu tố | Kết quả |
-|---|---|
-| Intent Type | **Informational** |
-| Micro-Intent | Know (Simple + Expert) |
-| Content Tone | Giải thích, cảnh báo, hướng dẫn xử lý |
-| Content Vehicle | Guide / How-to / Listicle rủi ro |
+- **Featured Snippet**: Bảng phân nhóm nợ CIC (Nhóm 1 đến Nhóm 5)
+- **People Also Ask (PAA)**:
+  - Trả chậm thẻ tín dụng 1 ngày có bị nợ xấu không?
+  - Phí phạt trả chậm thẻ tín dụng là bao nhiêu?
+  - Cách tính lãi trả chậm thẻ tín dụng như thế nào?
+  - Chậm trả thẻ tín dụng bao lâu thì bị nợ xấu?
+  - Thanh toán tối thiểu có bị tính lãi không?
+- **Organic Results**: Chủ yếu là bài viết dạng informational từ ngân hàng (SeABank, ACB, HDBank, Techcombank, BIDV) và tổ chức tài chính (Home Credit, Momo, ViettelMoney)
 
-## SERP Features
+## 4. Content Tone khuyến nghị
 
-- Featured Snippet: Có (đoạn giải thích nhóm nợ CIC)
-- People Also Ask (PAA): Có (trả chậm 1 ngày có bị nợ xấu, bao nhiêu ngày bị nợ xấu, cách tính lãi)
-- Video: Không rõ
-- Knowledge Panel: Không
+- **Giọng văn**: Thân thiện, dễ hiểu, xưng "bạn"
+- **Phong cách**: Tư vấn tài chính cá nhân, giải thích từng bước
+- **Yếu tố then chốt**: Bảng phân nhóm nợ CIC, công thức tính lãi, ví dụ minh họa cụ thể, mẹo phòng tránh thực tế
 
-## Content Format khuyến nghị
+## 5. Content Format khuyến nghị
 
-- Bài viết dạng Guide chuyên sâu (2500+ từ)
-- Bảng phân loại nhóm nợ CIC (quan trọng cho Snippet)
-- Công thức tính lãi + ví dụ cụ thể
-- Danh sách bullet gạch đầu dòng cho phần hậu quả
-- FAQ bám sát PAA queries
+- Bài viết dạng Guide chi tiết (2500+ từ)
+- Bảng tổng hợp phí phạt và nhóm nợ CIC
+- Ví dụ minh họa cụ thể với số liệu
+- FAQ section giải đáp thắc mắc phổ biến
+- CTA hướng đến thẻ tín dụng Home Credit

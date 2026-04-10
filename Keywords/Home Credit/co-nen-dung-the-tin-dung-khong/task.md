@@ -1,0 +1,11 @@
+- [x] PREPARATION: Tạo folder Keywords/Home Credit/co-nen-dung-the-tin-dung-khong/
+- [x] PHASE 1: Search Intent Analysis
+- [x] PHASE 2: Semantic Research & Entity Discovery
+- [x] PHASE 3: Competitor Intelligence
+- [x] PHASE 4: Service Matching
+- [x] PHASE 5: Tạo Outline
+- [x] PHASE 6: Viết bài (Content Writing)
+- [x] PHASE 7: Deep Research Fact-Checking
+- [x] PHASE 8: Rephrase & Uniqueness Check
+- [x] PHASE 9: HCVN Quality Audit
+- [x] PHASE 10: Auto-Validation & Deliver

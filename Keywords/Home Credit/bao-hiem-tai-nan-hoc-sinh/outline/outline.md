@@ -4,45 +4,60 @@
 h1, h2, h3 { font-size: 12pt !important; }
 </style>
 
-# Outline: Bảo hiểm tai nạn học sinh là gì? Quyền lợi cần biết
+# Outline: Bảo hiểm tai nạn học sinh là gì, giá bao nhiêu, mua ở đâu?
 
 | Field | Value |
 |---|---|
-| Title | Bảo hiểm tai nạn học sinh là gì? Quyền lợi cần biết |
-| Meta Description | Bảo hiểm tai nạn học sinh là gì? Tìm hiểu quyền lợi, mức phí, thủ tục bồi thường và cách tra cứu hợp đồng bảo hiểm cho học sinh sinh viên. |
+| Title | Bảo hiểm tai nạn học sinh là gì, giá bao nhiêu, mua ở đâu? |
+| Meta Description | Bảo hiểm tai nạn học sinh là gì? Tìm hiểu quyền lợi, mức phí, cách mua và thủ tục bồi thường bảo hiểm tai nạn học sinh chi tiết cùng Home Credit. |
 | KW chính | bảo hiểm tai nạn học sinh |
-| KW phụ | bảo hiểm tai nạn học sinh là gì |
-| | quyền lợi bảo hiểm tai nạn học sinh |
-| | tra cứu hợp đồng bảo hiểm |
+| KW phụ | tra cứu hợp đồng bảo hiểm |
 | | bảo hiểm tai nạn lao động |
-| KW Density Target | 1% – 1.5% |
-| Internal Link Density | 0.8% – 1.2% |
-| Word Count Target | 1000 – 1500 từ |
+| | bảo hiểm tai nạn học sinh là gì |
+| | quyền lợi bảo hiểm tai nạn học sinh |
+| Mật độ KW | 1% đến 1.5% |
+| Mật độ link nội bộ | 0.8% đến 1.2% |
 
 ---
 
-## Intro (70–150 chữ)
+## Intro (70 đến 150 chữ)
+Mở bài bằng bối cảnh: học sinh luôn đối mặt với rủi ro tai nạn trong sinh hoạt và học tập. Giới thiệu ngắn gọn bảo hiểm tai nạn học sinh là giải pháp bảo vệ tài chính cho gia đình. Kết bằng "Cùng Home Credit tìm hiểu chi tiết..."
 
 ## 1. Bảo hiểm tai nạn học sinh là gì?
+Định nghĩa bảo hiểm tai nạn học sinh (bảo hiểm thân thể học sinh). Nêu bản chất tự nguyện, mục đích bảo vệ sức khỏe, thân thể, tính mạng của học sinh trước rủi ro tai nạn. Phân biệt ngắn gọn với bảo hiểm y tế học sinh (bắt buộc).
 
 ## 2. Đối tượng và phạm vi bảo hiểm tai nạn học sinh
+Đối tượng: mầm non, tiểu học, THCS, THPT, CĐ, ĐH. Phạm vi: tai nạn 24/7 trong lãnh thổ Việt Nam. Thời hạn: 1 năm học.
 
 ## 3. Quyền lợi bảo hiểm tai nạn học sinh
 ### 3.1. Hỗ trợ chi phí y tế khi gặp tai nạn
+Chi trả chi phí cấp cứu, khám chữa bệnh, thuốc men, phẫu thuật phát sinh do tai nạn. Giải thích cơ chế chi trả theo hóa đơn thực tế hoặc theo mức quy định.
+
 ### 3.2. Bồi thường thương tật và tử vong
+Chi trả theo tỷ lệ phần trăm bảng tỷ lệ thương tật. Trường hợp tử vong: chi trả 100% số tiền bảo hiểm. Ví dụ minh họa.
+
 ### 3.3. Phụ cấp nằm viện và điều trị
+Trợ cấp theo ngày nằm viện điều trị nội trú. Giới hạn số ngày tối đa trong năm.
 
-## 4. Mức phí và cách tham gia bảo hiểm tai nạn học sinh (content gap)
+## 4. Mức phí và cách tham gia bảo hiểm tai nạn học sinh
+Công thức tính phí: Phí = Số tiền bảo hiểm x Tỷ lệ phí (khoảng 0.15%/năm). Bảng mức phí tham khảo theo mệnh giá. Các kênh mua: qua nhà trường, trực tiếp công ty BH, trực tuyến.
 
-## 5. Thủ tục yêu cầu bồi thường và tra cứu hợp đồng bảo hiểm (content gap)
+## 5. Thủ tục yêu cầu bồi thường và tra cứu hợp đồng bảo hiểm
+Hướng dẫn 3 bước yêu cầu bồi thường. Danh sách hồ sơ cần chuẩn bị. Cách tra cứu hợp đồng bảo hiểm qua nhà trường, website công ty BH, thẻ bảo hiểm.
 
-## 6. So sánh bảo hiểm tai nạn học sinh với bảo hiểm tai nạn lao động (content gap)
+## 6. So sánh bảo hiểm tai nạn học sinh với bảo hiểm tai nạn lao động
+Bảng so sánh theo tiêu chí: bản chất, đối tượng, phạm vi, người đóng phí, cơ quan quản lý. Nhận xét sau bảng.
 
 ## 7. Các trường hợp không được chi trả bảo hiểm
+Hành vi cố ý, vi phạm pháp luật. Ảnh hưởng rượu bia, chất kích thích. Bệnh có sẵn. Thiên tai, chiến tranh. Quá thời hạn yêu cầu bồi thường.
+
+## 8. Bảo vệ con em trước rủi ro tai nạn cùng Home Credit
+Giới thiệu giải pháp bảo hiểm tai nạn cá nhân từ Home Credit. Gắn internal link đến trang BH Tai nạn Cá nhân.
 
 ## Kết bài
+Tóm tắt giá trị bảo hiểm tai nạn học sinh. CTA dẫn về blog Home Credit.
 
-## Những câu hỏi thường gặp về bảo hiểm tai nạn học sinh
+## FAQ
 ### Bảo hiểm tai nạn học sinh có bắt buộc không?
 ### Mức đóng bảo hiểm tai nạn học sinh là bao nhiêu?
 ### Tra cứu hợp đồng bảo hiểm tai nạn học sinh ở đâu?
@@ -50,21 +65,12 @@ h1, h2, h3 { font-size: 12pt !important; }
 ## Disclaimer
 
 ---
-
 *Lưu ý: Thông tin trong bài mang tính chất tham khảo, được tổng hợp từ thị trường và không đại diện cho toàn bộ sản phẩm, dịch vụ của Home Credit.*
 
+## Đang so với các đối thủ
+- **Pacific Cross**: https://www.pacificcross.com.vn
+- **Prudential Vietnam**: https://www.prudential.com.vn
+- **FPT Shop / EBH**: https://fptshop.com.vn / https://ebh.vn
+
 ---
-
-*Giải pháp bảo hiểm toàn diện từ Home Credit giúp khách hàng an tâm trước mọi rủi ro về sức khỏe, tài chính và tài sản trong cuộc sống. Với đa dạng lựa chọn về quyền lợi và mức phí, Home Credit mang đến các gói bảo hiểm bao gồm:*
-
-- *[Gói An tâm tài chính](https://www.homecredit.vn/bao-hiem/goi-an-tam-tai-chinh)*
-- *[Bảo hiểm Bảo vệ Xe máy Toàn diện](https://www.homecredit.vn/bao-hiem/bao-hiem-bao-ve-xe-may-toan-dien)*
-- *[Bảo hiểm Trang thiết bị Nội thất](https://www.homecredit.vn/bao-hiem/bao-hiem-trang-thiet-bi-noi-that)*
-- *[Bảo hiểm Bảo vệ Toàn diện Thiết bị di động](https://www.homecredit.vn/bao-hiem/bao-hiem-bao-ve-toan-dien-thiet-bi-di-dong)*
-- *[Bảo hiểm Tai nạn Cá nhân](https://www.homecredit.vn/bao-hiem/bao-hiem-tai-nan)*
-- *[Bảo hiểm Sức khỏe Nội trú](https://www.homecredit.vn/bao-hiem/bao-hiem-suc-khoe-noi-tru)*
-- *[Bảo hiểm Sức khỏe Toàn diện](https://www.homecredit.vn/bao-hiem/bao-hiem-suc-khoe-toan-dien)*
-- *[Bảo hiểm Bệnh hiểm nghèo](https://www.homecredit.vn/bao-hiem/bao-hiem-benh-hiem-ngheo)*
-- *[Bảo hiểm Rơi vỡ Màn hình](https://www.homecredit.vn/bao-hiem/bao-hiem-roi-vo-man-hinh)*
-
-*Mỗi gói bảo hiểm từ Home Credit mang đến những quyền lợi ưu việt, giúp bạn yên tâm tận hưởng cuộc sống mà không còn lo lắng bởi gánh nặng tài chính. Gọi ngay 1900 633 633 để được tư vấn và giải đáp mọi thắc mắc chi tiết!*
+*Giải pháp bảo hiểm toàn diện từ Home Credit giúp khách hàng an tâm trước mọi rủi ro về sức khỏe, tài chính và tài sản trong cuộc sống...*

@@ -1,54 +1,79 @@
 # Competitor Analysis: trả chậm thẻ tín dụng
 
-## Competitor 1: Home Credit (bài cũ)
-**URL**: homecredit.vn/blog/thanh-toan-cham-the-tin-dung-co-sao-khong-101
+## Competitor 1: Home Credit Vietnam (Bài hiện tại)
+**URL**: https://www.homecredit.vn/blog/thanh-toan-cham-the-tin-dung-co-sao-khong-101
+**Title**: Thanh toán chậm thẻ tín dụng có sao không? Cách xử lý
 
-| H2 | H3 |
-|---|---|
-| 1. Khi nào bị xem là thanh toán chậm thẻ tín dụng? | |
-| 2. Thanh toán chậm thẻ tín dụng có bị phạt gì không? | 2.1. Chịu phí phạt trả chậm |
-| | 2.2. Chịu lãi suất quá hạn |
-| | 2.3. Ảnh hưởng tới lịch sử tín dụng |
-| | 2.4. Nguy cơ bị khởi kiện |
-| 3. Xử lý như thế nào khi thanh toán chậm? | 3.1 Liên hệ tổ chức tài chính |
-| | 3.2 Trả nợ ngay khi có thể |
-| | 3.3 Đề nghị trả góp linh hoạt |
-| 4. Cách tránh thanh toán chậm | |
-| 5. FAQ | 5.1, 5.2, 5.3 |
+### Heading Structure
+- H1: Thanh toán chậm thẻ tín dụng có sao không? Cách xử lý
+- H2: 1. Khi nào bị xem là thanh toán chậm thẻ tín dụng?
+- H2: 2. Thanh toán chậm thẻ tín dụng có bị phạt gì không?
+  - H3: 2.1. Chịu phí phạt trả chậm
+  - H3: 2.2. Chịu lãi suất quá hạn
+  - H3: 2.3. Ảnh hưởng tới lịch sử tín dụng
+- H2: 3. (Ngầm) Cách xử lý khi thanh toán chậm
+  - H3: 3.1 Liên hệ với tổ chức tài chính
+  - H3: 3.2 Trả nợ tín dụng ngay khi có thể
+  - H3: 3.3 Đề nghị trả góp linh hoạt
+- H2: 4. (Ngầm) Cách phòng tránh thanh toán chậm
+- H2: 5. (Ngầm) FAQ
+  - H3: 5.1 Có thể xin gia hạn thời gian thanh toán?
+  - H3: 5.2 Có thể trả góp dư nợ thẻ tín dụng?
 
-## Competitor 2: Bài "Nợ thẻ tín dụng quá hạn"
+### Nhận xét
+- Bài ngắn (~1600 từ), chưa đạt chuẩn 2500+
+- Thiếu bảng phân nhóm nợ CIC chi tiết
+- Không có công thức tính lãi
+- Không có ví dụ minh họa cụ thể cho phí phạt HC
+- Thiếu heading rõ ràng cho phần 3, 4, 5
+- Sử dụng Signature 7 (Cẩm nang Tài chính) thay vì Signature 4 (Credit Card)
 
-| H2 | H3 |
-|---|---|
-| 1. 4 bất lợi khi nợ thẻ tín dụng quá hạn | 1.1. Phí phạt + lãi suất 40% |
-| | 1.2. Nhận cảnh báo từ ngân hàng |
-| | 1.3. Trách nhiệm pháp lý |
-| | 1.4. Chuyển thành nợ xấu |
-| 2. Giải pháp khắc phục | 2.1. Trả góp dư nợ |
-| | 2.2. Trả nợ nhanh |
-| 3. FAQ | |
+---
 
-## Competitor 3: Bài "Trả chậm thẻ tín dụng 1 ngày"
+## Competitor 2: SeABank
+**Nguồn**: seabank.com.vn/tra-cham-the-tin-dung (từ search results)
 
-| H2 | H3 |
-|---|---|
-| Trả chậm 1 ngày có bị nợ xấu không? | |
-| Bao nhiêu ngày thì bị nợ xấu? | |
-| Nên làm gì nếu trễ 1 ngày? | |
-| Cách tránh trễ hạn trong tương lai | |
-| FAQ | 3 câu H3 |
+### Heading Structure (Tổng hợp từ search results)
+- Phí phạt trả chậm: 4% đến 6% trên dư nợ quá hạn
+- Lãi suất quá hạn: 20% đến 40%/năm
+- Công thức tính lãi: Dư nợ x Lãi suất / 365 x Số ngày
+- Phân nhóm nợ CIC 5 nhóm
 
-## Content Gap Analysis
+### Nhận xét
+- Phân tích kỹ công thức lãi suất
+- Có ví dụ tính toán minh họa
+- Thiếu phần CTA dịch vụ riêng
 
-| Topic | Bài cũ HC | Comp 2 | Comp 3 | Gap (cần bổ sung) |
+---
+
+## Competitor 3: ACB
+**Nguồn**: acb.com.vn (từ search results)
+
+### Heading Structure (Tổng hợp từ search results)
+- Khi nào bị tính trả chậm
+- Phí phạt trả chậm
+- Lãi suất quá hạn
+- Ảnh hưởng CIC và điểm tín dụng
+- Cách xử lý khi trả chậm
+
+### Nhận xét
+- Nội dung tương tự bài HC nhưng chi tiết hơn về biểu phí ACB
+- Nhấn mạnh hậu quả pháp lý
+
+---
+
+## So sánh Content Gap
+
+| Topic | HC hiện tại | SeABank | ACB | Bài mới (cần bổ sung) |
 |---|---|---|---|---|
-| Định nghĩa/khi nào bị trả chậm | x | | | Giữ, mở rộng |
-| Phí phạt + ví dụ cụ thể | x | x | | Bổ sung bảng so sánh phí các ngân hàng |
-| Lãi suất quá hạn + công thức | x | x | | Bổ sung công thức + ví dụ tính chi tiết |
-| Bảng nhóm nợ CIC đầy đủ | x | | | Tạo bảng Markdown chuyên sâu |
-| Trả chậm 1 ngày có sao không | | | x | BỔ SUNG (query volume cao) |
-| Bao nhiêu ngày thì nợ xấu | | | x | BỔ SUNG |
-| Mẹo kiểm soát nợ thẻ | | x | | BỔ SUNG |
-| Cảnh báo/nhắc nhở từ ngân hàng | | x | | Merge vào phần hậu quả |
-| Thanh toán tối thiểu giải thích | x (lướt) | | | MỞ RỘNG chuyên sâu |
-| CTA dịch vụ HC | x (yếu) | | | Tạo heading CTA mạnh |
+| Định nghĩa trả chậm | Co | Co | Co | Co (chi tiết hơn) |
+| Phí phạt trả chậm | Tổng quát | Chi tiết | Chi tiết | Chi tiết + bảng HC |
+| Lãi suất quá hạn | Tổng quát | Công thức | Tổng quát | Công thức + ví dụ HC |
+| Phân nhóm nợ CIC | Có (5 nhóm) | Có (5 nhóm) | Có | Bảng chi tiết + mốc thời gian |
+| Công thức tính lãi | Không | Có | Không | Có + ví dụ cụ thể |
+| Ví dụ minh họa | Có (cơ bản) | Có (chi tiết) | Không | Có (chi tiết với số HC) |
+| Mẹo phòng tránh | Bullet list | Không | Không | Bullet list chi tiết |
+| Dịch vụ HC | CTA mở thẻ | N/A | N/A | H2 riêng + Trả góp 0% |
+| FAQ | 2 câu | Không | Không | 5 câu |
+| Biểu phí HC cụ thể | Không | N/A | N/A | Có (0,12%/ngày, 49,5%/năm) |
+| Nguy cơ pháp lý | Có (Thông tư) | Không | Có | Có (chi tiết hơn) |
